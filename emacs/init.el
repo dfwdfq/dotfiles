@@ -78,3 +78,12 @@
 (tool-bar-mode -1)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+
+;;set up backup files
+(setq backup-dir "~/.config/.emacs/backups/")
+(setq backup-directory-alist
+      `((".*" . ,(expand-file-name backup-dir))))
+
+(setq auto-save-file-name-transforms
+      `((".*" ,(expand-file-name backup-dir) t)))
