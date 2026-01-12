@@ -30,7 +30,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(package-selected-packages '(corfu racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -90,3 +90,7 @@
 
 ;;load my stuff for working in C
 (load "~/.config/emacs/lisp/c_stuff.el")
+
+
+(setq scheme-program-name "~/tinyscheme-1.42/scheme")
+(setq auto-mode-alist (cons '("\\.rkt\\'" . scheme-mode) auto-mode-alist))
