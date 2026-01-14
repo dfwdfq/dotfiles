@@ -20,9 +20,11 @@
 (defun create-note ()
   "Ask user for filename and and title."
   (interactive)
-  (let ((default-dir "~/docs/") 
-        (filename (read-string "Enter filename: " "new-note.org"))
-	(title    (read-string "Enter title:")))
+  (let* ((filename (read-string "Enter filename: " "new-note.org"))
+	 (title    (read-string "Enter title:"))
+	 (type     (read-string "Enter type[personal|tech|philosophy]:"))
+	 (default-dir (concat "~/docs/" type)))
+
     
     ;; Add .org extension if not present
     (unless (string-match "\\.[a-zA-Z]+$" filename)
