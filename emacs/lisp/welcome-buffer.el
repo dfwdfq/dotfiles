@@ -33,8 +33,8 @@
     (find-file (expand-file-name filename default-dir))
     (insert "#+title: " title "\n")
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")
-    
-    (kill-buffer "*Welcome*")))
+    (insert "#+TAGS: ")))
+
 
 (defun make-button (text action)
   "Create a button that works when point is on it."
@@ -81,9 +81,7 @@
             (insert "\n")
 	    (insert (make-string button-padding ? ))
 	    (make-button "[Open .emacs]" #'open-config)
-
 	    
-
 	    ;;(insert (make-string button-padding ? ))
             ;;(make-button "[See Dot Files]" #'dotfiles-manager)
 
