@@ -22,7 +22,7 @@
   (interactive)
   (let* ((filename (read-string "Enter filename: " "new-note.org"))
 	 (title    (read-string "Enter title:"))
-	 (type     (read-string "Enter type[personal|tech|philosophy]:"))
+	 (type     (read-string "Enter type[personal|tech|philosophy|job]:"))
 	 (default-dir (concat "~/docs/" type)))
 
     
