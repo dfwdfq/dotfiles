@@ -86,15 +86,19 @@
 (use-package company
   :ensure t
   :config
-  (setq company-idle-delay 0.2)       
-  (setq company-minimum-prefix-length 2) 
+  (setq company-idle-delay 0.2)          ; automatic popup (set to nil to disable)
+  (setq company-minimum-prefix-length 2)
   (setq company-tooltip-align-annotations t)
-  (setq company-require-match nil)     
-  (setq company-dabbrev-downcase nil)  
-  (setq company-dabbrev-ignore-case t) 
-  (setq company-show-numbers t)        
+  (setq company-require-match nil)
+  (setq company-dabbrev-downcase nil)
+  (setq company-dabbrev-ignore-case t)
+  (setq company-show-numbers t)
+
+  (define-key company-active-map (kbd "TAB") nil)
+  (define-key company-active-map (kbd "<backtab>") nil)
+
   :bind
-  ("TAB" . company-complete-common-or-cycle)
-  ("<backtab>" . company-select-previous)
+  ("C-q" . company-complete)  
+
   :hook
   (after-init . global-company-mode))
