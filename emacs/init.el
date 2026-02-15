@@ -95,6 +95,3 @@
 
 (setq scheme-program-name "~/tinyscheme-1.42/scheme")
 (setq auto-mode-alist (cons '("\\.rkt\\'" . scheme-mode) auto-mode-alist))
-
-;;auto-complete
-(ac-config-default)
