@@ -50,25 +50,11 @@
 ;; Bind C-x-e to move to the end of the buffer
 (global-set-key (kbd "C-x e") 'move-to-end-of-buffer)
 
-(defun verse-insert ()
-  "Insert verse in org mode"
-  (interactive)
-  (insert "#+BEGIN_VERSE\n\n#+END_VERSE")
-  (forward-line -1))
-
-(defun source-insert ()
-  "Insert source in org mode"
-  (interactive)
-  (insert "#+BEGIN_SRC\n\n#+END_SRC")
-  (forward-line -2))
-
-(require 'org)
-(define-key org-mode-map (kbd "M-v v") #'verse-insert)
-(define-key org-mode-map (kbd "M-v c") #'source-insert)
 
 
 (add-to-list 'load-path "~/.config/emacs/lisp")  
 (require 'welcome-buffer)
+(require 'org-extras)
 
 ;; Display welcome buffer on startup
 (add-hook 'emacs-startup-hook #'display-welcome-buffer)
