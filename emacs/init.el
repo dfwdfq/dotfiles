@@ -6,7 +6,6 @@
 ;; Global font lock
 (global-font-lock-mode t)
 
-
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -30,7 +29,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(corfu racket-mode)))
+ '(package-selected-packages '(auto-complete corfu racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -101,3 +100,6 @@
 
 (setq scheme-program-name "~/tinyscheme-1.42/scheme")
 (setq auto-mode-alist (cons '("\\.rkt\\'" . scheme-mode) auto-mode-alist))
+
+;;auto-complete
+(ac-config-default)
