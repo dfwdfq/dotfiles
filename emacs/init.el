@@ -6,14 +6,6 @@
 ;; Global font lock
 (global-font-lock-mode t)
 
-<<<<<<< HEAD
-=======
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
-(package-initialize)
-
->>>>>>> bc5713c27c5adf7b721c71967555434fcd468201
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
