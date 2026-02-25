@@ -1,3 +1,6 @@
+;;#variable: welcome-logo
+;;#description: ascii-art for welcome buffer
+;;#.
 (defvar welcome-logo
   '("\u2804\u2804\u2804\u28b0\u28e7\u28fc\u28ef\u2804\u28f8\u28e0\u28f6\u28f6\u28e6\u28fe\u2804\u2804\u2804\u2804\u2840\u2804\u2880\u28ff\u28ff\u2804\u2804\u2804\u28b8\u2847\u2804\u2804"
     "\u2804\u2804\u2804\u28fe\u28ff\u283f\u283f\u2836\u283f\u28bf\u28ff\u28ff\u28ff\u28ff\u28e6\u28e4\u28c4\u2880\u2845\u28a0\u28fe\u28db\u2849\u2804\u2804\u2804\u2838\u2880\u28ff\u2804"
@@ -16,7 +19,10 @@
     "\u28ff\u28ff\u28ff\u28f6\u28f6\u28ee\u28e5\u28d2\u2832\u28ae\u28dd\u287f\u28ff\u28ff\u2846\u28ff\u287f\u2803\u2804\u2804\u2804\u2804\u2804\u2804\u2804\u28e0\u28f4\u28ff\u28ff\u28ff")
   "ASCII art logo for welcome screen.")
 
-
+;;#function name: create-note
+;;#arguments: none
+;;#description: interactively create org note.
+;;#.
 (defun create-note ()
   "Ask user for filename and and title."
   (interactive)
@@ -35,7 +41,10 @@
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")
     (insert "#+TAGS: ")))
 
-
+;;#function name: make-button
+;;#arguments: text action
+;;#description: create button in welcome-buffer.
+;;#.
 (defun make-button (text action)
   "Create a button that works when point is on it."
   (let ((start (point)))
@@ -52,6 +61,10 @@
     (put-text-property start (point) 'front-sticky '(read-only))
     (put-text-property start (point) 'rear-nonsticky '(read-only))))
 
+;;#function name: display-welcome-buffer
+;;#arguments: none
+;;#description: Display welcome buffer with centered ASCII art and buttons.
+;;#.
 (defun display-welcome-buffer ()
   "Display welcome buffer with centered ASCII art and buttons."
   (interactive)

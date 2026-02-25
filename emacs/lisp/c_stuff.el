@@ -1,3 +1,7 @@
+;;#function name: create-source-header
+;;#arguments: none
+;;#description: create header file and associated source file.
+;;#.
 (defun create-source-header ()
   "Create header file and associated source file."
   (interactive)
