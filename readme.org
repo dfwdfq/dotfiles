@@ -21,8 +21,13 @@ the *terminal*, where I run my *shell* to perform most operations, and *the edit
 which is my primary instrument.
 
 *** ~kitty~ : terminal
-[[file:docs/kitty-docs/index.org][documentation on kitty configuration]]
-[[file:docs/kitty-docs/why-kitty.org][why Kitty?]]
+| page             |                description   |
+|------------------+------------------------------|
+|[[file:docs/kitty-docs/index.org][kitty docs]]        | detailed description of      |
+|                  | *Kitty* terminal.            |
+|[[file:docs/kitty-docs/why-kitty.org][why kitty?]]        | reasons why I use *Kitty*    |
+|-------------------------------------------------|
+
 *** ~Emacs~ : editor
 [[file:docs/emacs-docs/index.org][documentation on emacs configuration]]
 [[file:docs/emacs-docs/why-emacs.org][why Emacs?]]
@@ -51,7 +56,7 @@ it's impossible to find a superposition that satisfies all existing user require
 Second, why would someone seriously call it philosophy? To answer this question,
 one must understand the Unix philosophy—particularly as documented in *Eric Raymond's The Art of Unix Programming*.
 
-So to define my personal philosophy of computation I provide 3 documents:
+So to define my personal philosophy of computation I provide *3 documents*:
 ** Principles
 They answer multiple questions *Why?*
 [[file:docs/philosophy/principles.org][principles explained]]
