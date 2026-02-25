@@ -85,5 +85,9 @@ So to define my personal philosophy of computation I provide *3 documents*:
 | [[file:docs/philosophy/goals.org][goals explained]]      |          *What?*                          |
 
 * Gallery
+/Click on the title to see screenshot./
 ** [[file:gallery/background.png][wallpaper]]
 My custom wallpaper that is used as default background image.
+
+** [[file:gallery/emacs-welcome-buffer.png][Emacs welcome buffer]]
+The view of welcome buffer with ascii art and 2 buttons.
