@@ -3,8 +3,12 @@
 
 * What's inside?
 ** ~Qtile~ : window manager
-** ~kitty~ : terminal
-** ~Emacs~ : editor
-** ~Fish~  : shell 
+** The holy trinity
+Since I prefer TUI over GUI I consider myself a terminal monk.
+So I spend most of my time in terminal and listed below programs
+are holy trinity.
+*** ~kitty~ : terminal
+*** ~Emacs~ : editor
+*** ~Fish~  : shell 
 
 
