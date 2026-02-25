@@ -3,3 +3,4 @@
 [[file:fish_functions.org][documentation for my own functions]]
 * aliases
 * environment variables
+[[file:env_variables.org][documentation for environmental variables]]
