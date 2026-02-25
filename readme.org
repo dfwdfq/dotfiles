@@ -86,3 +86,4 @@ So to define my personal philosophy of computation I provide *3 documents*:
 
 * Gallery
 ** [[file:gallery/background.png][wallpaper]]
+My custom wallpaper that is used as default background image.
