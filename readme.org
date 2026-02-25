@@ -1,0 +1,9 @@
+#+title: dotfiles
+#+author: dfwdfq
+
+* What's inside?
+** ~Fish~  : shell 
+** ~Emacs~ : editor
+** ~kitty~ : terminal
+** ~Qtile~ : window manager
+
