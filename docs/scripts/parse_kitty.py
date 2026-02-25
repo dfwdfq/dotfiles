@@ -26,7 +26,7 @@ def parse_kitty_conf(conf_path):
                 desc_line = line.replace('#@desc', '', 1).strip()
                 current_desc.append(desc_line)
             elif line and not line.startswith('#'):
-                current_lines.append(f"/{line}/")
+                current_lines.append(line)
         if current_section:
             sections.append({
                 'title': current_section,
@@ -44,10 +44,17 @@ def generate_org(sections, output_path):
             if sec['desc']:
                 f.write(f"{sec['desc']}\n\n")
             if sec['lines']:
+                f.write("| Setting | Value |\n")
+                f.write("|---------|-------|\n")
                 for line in sec['lines']:
-                    f.write(f"{line}\n")
+                    parts = line.split(' ', 1)
+                    if len(parts) == 2:
+                        key, val = parts
+                    else:
+                        key = line
+                        val = ""
+                    f.write(f"| {key} | {val} |\n")
                 f.write("\n")
 
-                
 sections = parse_kitty_conf(os.path.expanduser("~/.config/kitty/kitty.conf"))
 generate_org(sections, "../kitty-docs/kitty.org")
