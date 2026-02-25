@@ -63,6 +63,7 @@ In perfect world documentation is created automatically. We don't live in perfec
 |----------------------+-------------------------------------------|
 |  [[file:docs/manual-documentation.org][manual doc]]          |   notes on manual documentation process   |
 |  [[file:docs/automatic-documentation.org][automatic doc]]       |   notes on automatic documentation process|
+|  [[file:docs/on-style.org][on docs style]]       |   notes about style of documentation      |
 
 * Bootstrapping
 |       link                      |           description                         |
