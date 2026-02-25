@@ -1,0 +1,18 @@
+#+title: Why fish?
+My first shell was obviously *bash*. And it sucks.
+Fish feels far better due to vast amount of included batteries.
+
+* 0. Web-driven configuration
+Run ~fish_config~ and then choose theme, prompt, bindings, e.t.c
+It's far easier, then editing .bashrc
+
+* 1. Auto-suggestions
+No need to retype commands twice. Auto-suggestions increase productivity, since you
+spend less time of monkeytyping.
+
+* 2. reads man pages
+It shows portion of man page for suggested command. It helps to remember commands.
+
+* 3. Interactivity
+There is an ability to select from suggested options.
+
