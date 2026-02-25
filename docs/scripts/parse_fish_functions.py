@@ -17,10 +17,10 @@ def parse(lst):
 
 def generate_entry(name, purpose, arguments):
     entry ="""
-* ~{}~ function
-** purpose
+** ~{}~ function
+*** purpose
 {}
-** arguments
+*** arguments
 {}
     """
     return entry.format(name,purpose,arguments)

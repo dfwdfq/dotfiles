@@ -1,36 +1,36 @@
 #+title: fish functions
 
-* ~clipcat~ function
-** purpose
+** ~clipcat~ function
+*** purpose
 put passed files into X clipboard.
-** arguments
+*** arguments
 any
     
 
-* ~tell~ function
-** purpose
+** ~tell~ function
+*** purpose
 print to STDOUT content of X clipboard.
-** arguments
+*** arguments
 none
     
 
-* ~gpush~ function
-** purpose
+** ~gpush~ function
+*** purpose
 push changes to Github repository using token from docs directory.
-** arguments
+*** arguments
 Github repository, repository branch
     
 
-* ~mkcd~ function
-** purpose
+** ~mkcd~ function
+*** purpose
 make directory and then change current directory to just created one.
-** arguments
+*** arguments
 directory
     
 
-* ~jump~ function
-** purpose
+** ~jump~ function
+*** purpose
 quickly change directory from list.
-** arguments
+*** arguments
 none
     
