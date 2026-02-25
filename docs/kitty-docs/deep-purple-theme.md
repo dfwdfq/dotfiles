@@ -1,6 +1,6 @@
 # Deep Purple Kitty Theme
 
-A custom color scheme for the Kitty terminal, featuring deep purples, vibrant accents, and carefully chosen contrasts for comfortable long‑sessions.
+A custom color scheme for the Kitty terminal, featuring deep purples, vibrant accents, and carefully chosen contrasts for comfortable long‑sessions. The same theme is used for Emacs.
 
 ## Base Colors
 | Role                  | Hex     |
