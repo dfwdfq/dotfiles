@@ -23,7 +23,7 @@ def extract_keybinding(data):
 
 def gen_entry(keybinding, desc):
     entry = """
-**~{}~ keybinding
+** ~{}~ keybinding
 *** purpose
 {}    
     """
