@@ -20,4 +20,3 @@ which is my primary instrument.
 *** ~Fish~  : shell
 [[file:docs/fish-docs/index.org][documentation on fish configuration]]
 
-
