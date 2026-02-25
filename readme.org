@@ -56,8 +56,11 @@ choosen GNU/Linux distribution.
 
 * Notes on process of documentation creation process
 In perfect world documentation is created automatically. We don't live in perfect world.
-** Manual documentation
-** Automated documentation
+|      link            |           description                     |
+|----------------------+-------------------------------------------|
+|  [[file:docs/manual-documentation.org][manual doc]]          |   notes on manual documentation process   |
+|  [[file:docs/automatic-documentation.org][automatic doc]]       |   notes on automatic documentation process|
+
 * Bootstrapping
 * Personal philosophy of computation
 First, such a philosophy remains personal because there is no silver bullet and
