@@ -1,0 +1,5 @@
+#+title: Fish configuration
+* custom functions
+[[file:fish_functions.org][documentation for my own functions]]
+* aliases
+* environment variables
