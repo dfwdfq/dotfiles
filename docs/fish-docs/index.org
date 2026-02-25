@@ -1,9 +1,9 @@
 #+title: Fish configuration
-* custom functions
+** custom functions
 [[file:fish_functions.org][documentation for my own functions]]
-* aliases
+** aliases
 I have no aliases.
-* environment variables
+** environment variables
 [[file:env_variables.org][documentation for environmental variables]]
-* Why fish?
+** Why fish?
 [[file:why-fish.org][reasons I use Fish]]
