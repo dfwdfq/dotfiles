@@ -3,54 +3,54 @@
 * ~clipcat~ function
 ** purpose
 #+BEGIN_VERSE
-put passed files into X clipboard.
+  put passed files into X clipboard.
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-any
+  any
 #+END_VERSE
     
 
 * ~tell~ function
 ** purpose
 #+BEGIN_VERSE
-print to STDOUT content of X clipboard.
+  print to STDOUT content of X clipboard.
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-none
+  none
 #+END_VERSE
     
 
 * ~gpush~ function
 ** purpose
 #+BEGIN_VERSE
-push changes to Github repository using token from docs directory.
+  push changes to Github repository using token from docs directory.
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-Github repository, repository branch
+  Github repository, repository branch
 #+END_VERSE
     
 
 * ~mkcd~ function
 ** purpose
 #+BEGIN_VERSE
-make directory and then change current directory to just created one.
+  make directory and then change current directory to just created one.
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-directory
+  directory
 #+END_VERSE
     
 
 * ~jump~ function
 ** purpose
 #+BEGIN_VERSE
-quickly change directory from list.
+  quickly change directory from list.
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-none
+  none
 #+END_VERSE
     

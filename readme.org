@@ -8,7 +8,7 @@ I did not roll my own window manager for X server, so I use this one.
 this one to build my own workflow. Maybe I will replace it with my own in future.
 
 [[file:docs/qtile-docs/index.org][documentation on qtile configuration]]
-** The holy trinity
+** ~The holy trinity~
 Since I /prefer TUI over GUI/, I consider myself a _terminal monk_.
 I spend most of my time in the *terminal*, and the programs listed below are the holy trinity:
 the *terminal*, where I run my *shell* to perform most operations, and *the editor*,

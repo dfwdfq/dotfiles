@@ -20,11 +20,11 @@ def generate_entry(name, purpose, arguments):
 * ~{}~ function
 ** purpose
 #+BEGIN_VERSE
-{}
+  {}
 #+END_VERSE
 ** arguments
 #+BEGIN_VERSE
-{}
+  {}
 #+END_VERSE
     """
     return entry.format(name,purpose,arguments)
