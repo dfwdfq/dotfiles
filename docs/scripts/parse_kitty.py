@@ -1,60 +1,40 @@
 #!/usr/bin/env python3
 import sys
-import re
 import os
+import re
 
-def parse_kitty_conf(conf_path):
-    sections = []
-    current_section = None
-    current_desc = []
-    current_lines = []
+kitty_conf = os.path.expanduser("~/.config/kitty/kitty.conf")
 
-    with open(conf_path, 'r') as f:
-        for line in f:
-            line = line.rstrip()
-            if line.startswith('#@section'):
-                if current_section:
-                    sections.append({
-                        'title': current_section,
-                        'desc': '\n'.join(current_desc),
-                        'lines': current_lines
-                    })
-                current_section = line.replace('#@section', '', 1).strip()
-                current_desc = []
-                current_lines = []
-            elif line.startswith('#@desc'):
-                desc_line = line.replace('#@desc', '', 1).strip()
-                current_desc.append(desc_line)
-            elif line and not line.startswith('#'):
-                current_lines.append(line)
-        if current_section:
-            sections.append({
-                'title': current_section,
-                'desc': '\n'.join(current_desc),
-                'lines': current_lines
-            })
-    return sections
+def read_file(path):
+    with open(path,"r") as f:
+        return f.read().strip()
+    
+def extract_docs(data):
+    found = re.findall("#variable name:.*\n#.*\n.*\n",data)
+    result = []
+    for e in found:
+        name, purpose,val= e.strip().split("\n")
+        name = name.replace("#variable name:","").strip()
+        purpose = purpose.replace("#purpose:","").strip()
+        val    = val.replace("#value:","").strip()
+        result.append((name,purpose,val))
+    return result
 
-def generate_org(sections, output_path):
-    with open(output_path, 'w') as f:
-        f.write("#+title: Kitty Terminal Configuration\n")
-        f.write("#+author: dfwdfq\n\n")
-        for sec in sections:
-            f.write(f"* {sec['title']}\n")
-            if sec['desc']:
-                f.write(f"{sec['desc']}\n\n")
-            if sec['lines']:
-                f.write("| Setting | Value |\n")
-                f.write("|---------|-------|\n")
-                for line in sec['lines']:
-                    parts = line.split(' ', 1)
-                    if len(parts) == 2:
-                        key, val = parts
-                    else:
-                        key = line
-                        val = ""
-                    f.write(f"| {key} | {val} |\n")
-                f.write("\n")
+def gen_entry(name, purpose, val):
+    entry = """
+** variable name ~{}~ 
+*** purpose
+{}
+*** value
+{}    
+    """
+    return entry.format(name,purpose, val)
 
-sections = parse_kitty_conf(os.path.expanduser("~/.config/kitty/kitty.conf"))
-generate_org(sections, "../kitty-docs/kitty.org")
+output = ["#+title: Kitty variables"]
+for n, p, v in extract_docs(read_file(kitty_conf)):
+    output.append(gen_entry(n,p,v))
+
+with open("../kitty-docs/kitty.org","w") as f:
+    f.write("\n".join(output))
+    
+
