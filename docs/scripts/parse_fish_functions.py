@@ -34,5 +34,5 @@ for f in functions:
     name,purpose,arguments = parse(read_first_3(f))
     output.append(generate_entry(name,purpose,arguments))
     
-with open("../fish_functions.org","w") as f:
+with open("../fish-docs/fish_functions.org","w") as f:
     f.write("\n".join(output))
