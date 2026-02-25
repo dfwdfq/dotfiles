@@ -1,6 +1,9 @@
 #+title: dotfiles
 #+author: dfwdfq
 
+The main goal of this repository is to create *reproducible* custom user space for any GNU/Linux
+distribution I use. It's collection of *dotfiles*, *documentation* and *bootstrapping scripts*.
+*Personal Philosophy of computation* included.
 
 * What's inside?
 ** ~Qtile~ : window manager
@@ -26,8 +29,9 @@ List of programs written and used specifically by myself.
 They are required by some /dotfiles/. So they should be installed.
 [[file:docs/custom.org][custom tools I use]]
 
-
 ** ~tools~
 This section describes ~non-custom~ programs, which can not
 be described as /batteries/, so they should be installed manually.
 [[file:docs/non-custom.org][tools I use]]
+
+
