@@ -26,7 +26,7 @@ def parse_kitty_conf(conf_path):
                 desc_line = line.replace('#@desc', '', 1).strip()
                 current_desc.append(desc_line)
             elif line and not line.startswith('#'):
-                current_lines.append(line)
+                current_lines.append(f"/{line}/")
         if current_section:
             sections.append({
                 'title': current_section,
