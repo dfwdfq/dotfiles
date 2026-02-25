@@ -1,4 +1,8 @@
-;; Disable the menu bar
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
+
+
 (menu-bar-mode -1)
 
 (global-display-line-numbers-mode 1)
@@ -6,9 +10,6 @@
 ;; Global font lock
 (global-font-lock-mode t)
 
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
 
 
 (defun open-config ()
@@ -45,9 +46,14 @@
      (goto-char (point-max))))
 
 ;; Bind C-x-a to move to the beginning of the buffer
+;;#keybinding: C-x a
+;;#description: move to beginning of buffer.
+;;#.
 (global-set-key (kbd "C-x a") 'move-to-beginning-of-buffer)
 
-;; Bind C-x-e to move to the end of the buffer
+;;#keybinding: C-x e
+;;#description: move to end of buffer
+;;#.
 (global-set-key (kbd "C-x e") 'move-to-end-of-buffer)
 
 
@@ -83,6 +89,9 @@
 (setq auto-mode-alist (cons '("\\.rkt\\'" . scheme-mode) auto-mode-alist))
 
 
+;;#keybinding: C-q
+;;#description: complete suggestion.
+;;#.
 (use-package company
   :ensure t
   :config
