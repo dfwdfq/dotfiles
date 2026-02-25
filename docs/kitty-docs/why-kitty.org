@@ -1,0 +1,18 @@
+#+title: Why Kitty?
+My first terminal was *iterm*. I've been using it for really long time.
+I didn't know anything about terminal multeplexing, so I never heard about
+*Tmux* or *Zellij*. It was ass in a pain, because I was required to spawn
+several process of *iterm* and later my workspace was slowly becoming a mess.
+*Kitty* changed everything.
+
+* 0. Tabs
+~ctrl+shift+T~ opens a new tab. No need to run another *Kitty*.x
+
+* 1. GPU rendering
+I can watch videos and render real graphics in terminal.
+
+* 2. Kittens
+*ssh*, *icat*, *diff* - extends your abilities.
+
+* 3. Hackability
+It's hackable and I can tune terminal to exact state I need.
