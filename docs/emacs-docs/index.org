@@ -1,2 +1,13 @@
 #+title: Emacs configuration
+* Deep purple theme
+I use the same theme as in *Kitty*.
+
+* Emacs lisp stuff
+** init.el explained
+** welcome buffer
+** C stuff
+** extras for org
+
+* Why Emacs?
+[[file:why-emacs.org][reasons I use Emacs]]
 

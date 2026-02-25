@@ -5,3 +5,5 @@
 I have no aliases.
 * environment variables
 [[file:env_variables.org][documentation for environmental variables]]
+* Why fish?
+[[file:why-fish.org][reasons I use Fish]]
