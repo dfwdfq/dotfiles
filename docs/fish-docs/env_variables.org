@@ -1,0 +1,22 @@
+#+title: environmental variables
+
+** ~VISUAL~ variable
+*** purpose
+whenever some programs needs editor they look for this variable
+*** value
+emacs -nw
+    
+
+** ~EDITOR~ variable
+*** purpose
+same as $VISUAL
+*** value
+emacs -nw
+    
+
+** ~BROWSER~ variable
+*** purpose
+look for this variable when it's required to open browser
+*** value
+firefox
+    
