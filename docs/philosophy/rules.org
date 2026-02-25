@@ -1,42 +1,42 @@
 #+title: Rules
 Rules are derived from principles. They defined approach of user space design.
 
-* Terminal-first
-** 0. TUI over GUI
+** Terminal-first
+*** 0. TUI over GUI
 Prefer terminal applications whenever possible.
-** 1. Keyboard over mouse
+*** 1. Keyboard over mouse
 All workflows must be controllable without a mouse.
-** 2. Use terminal multeplexing
+*** 2. Use terminal multeplexing
 This rule is satisfied by *Kitty* terminal.
 
-* Intentionality
-** 0. Every configuration line, alias or function must have an explanation
+** Intentionality
+*** 0. Every configuration line, alias or function must have an explanation
 Later it can be parsed and so documentation can be generated automatically.
-** 1. No dead code
+*** 1. No dead code
 Remove unused items promptly.
-** 2. Perform regular audits
+*** 2. Perform regular audits
 Investigate whether config is outdated, package is no longer required or documentation is outdated.
-** 3. Explain choice reason
+*** 3. Explain choice reason
 Document your choices. Later it can be used to analyze the evolution process.
 
-* Minimalism
-** 0. Prefer tools in flavour of Unix Philosophy
+** Minimalism
+*** 0. Prefer tools in flavour of Unix Philosophy
 Avoid using big monoliths. Prefer tools that follow the Unix Philosophy
 (do one thing well, compose via pipes).
-** 1. Avoid dependencies
+*** 1. Avoid dependencies
 If you can solve problem, using standard libraries of your scripting language, use them.
 Avoid installing additional dependencies.
 
-* Pragmatism
-** 0. Premature optimisation is evil
+** Pragmatism
+*** 0. Premature optimisation is evil
 Make it work first, then perfect.
-** 1. Accept "good enough"
+*** 1. Accept "good enough"
 If solution suffices, keep going. There is still some job to be done.
 
-* Reproducibility
-** 0. Git is cool
+** Reproducibility
+*** 0. Git is cool
 Use git if it can be version-controlled.
-** 1. Bootstrapping
+*** 1. Bootstrapping
 Maintain a bootstrap script that automates setup from scratch.
 
 

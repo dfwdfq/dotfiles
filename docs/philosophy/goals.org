@@ -2,19 +2,19 @@
 Goals are implications of rules. They define the shape of user space to achieve and
 answer one straight question - what is purpose of such system configuration?
 
-* 0. Fully reproducible environment
+** 0. Fully reproducible environment
 A single bootstrap script rebuilds the entire user space.
 
-* 1. Old-school Unix hacking
+** 1. Old-school Unix hacking
 The system feels like a workshop of simple, composable tools.
 
-* 2. Automatically documented
+** 2. Automatically documented
 Documentation is generated from annotated sources, always in sync.
 
-* 3. Fits into a single person's mind
+** 3. Fits into a single person's mind
 The system is small and understandable in its entirety.
 
-* 4. Alive system that evolves
+** 4. Alive system that evolves
 The configuration is not static. It grows and changes to fit requirements.
 The philosophy itself is versioned.
 
