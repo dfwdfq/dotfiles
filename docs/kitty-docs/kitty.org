@@ -1,7 +1,7 @@
 #+title: Kitty Terminal Configuration
 #+author: dfwdfq
 
-* Fonts
+** Fonts
 I use JetBrains Mono. Bold/italic faces are automatically resolved.
 
 | Setting | Value |
@@ -12,21 +12,21 @@ I use JetBrains Mono. Bold/italic faces are automatically resolved.
 | bold_italic_font | auto |
 | font_size | 20.0 |
 
-* Key Modifier
+** Key Modifier
 The primary modifier for Kitty shortcuts is set to Ctrl+Shift to avoid conflicts with shell keybindings.
 
 | Setting | Value |
 |---------|-------|
 | kitty_mod | ctrl+shift |
 
-* Mouse
+** Mouse
 Hide the mouse cursor after 3 seconds of inactivity to reduce visual clutter.
 
 | Setting | Value |
 |---------|-------|
 | mouse_hide_wait | 3.0 |
 
-* Bell
+** Bell
 I disable the audio bell because it sucks. The bell color is defined in the theme file.
 
 | Setting | Value |
@@ -35,7 +35,7 @@ I disable the audio bell because it sucks. The bell color is defined in the them
 | visual_bell_duration | 0.1 |
 | visual_bell_color |  |
 
-* Window Size
+** Window Size
 Kitty remembers the window size between launches. The initial dimensions are set for comfortable splits.
 
 | Setting | Value |
@@ -44,7 +44,7 @@ Kitty remembers the window size between launches. The initial dimensions are set
 | initial_window_width | 1200 |
 | initial_window_height | 800 |
 
-* Performance
+** Performance
 Low repaint/input delays reduce latency. Sync‑to‑monitor prevents tearing.
 
 | Setting | Value |
@@ -53,7 +53,7 @@ Low repaint/input delays reduce latency. Sync‑to‑monitor prevents tearing.
 | input_delay | 3 |
 | sync_to_monitor | yes |
 
-* Cursor
+** Cursor
 I prefer a steady block cursor (no blink) for precise editing.
 
 | Setting | Value |
@@ -61,7 +61,7 @@ I prefer a steady block cursor (no blink) for precise editing.
 | cursor_shape | block |
 | cursor_blink_interval | 0 |
 
-* Scrollback
+** Scrollback
 10000 lines of scrollback history, and the mouse wheel scrolls faster for quick navigation.
 
 | Setting | Value |
@@ -69,7 +69,7 @@ I prefer a steady block cursor (no blink) for precise editing.
 | scrollback_lines | 10000 |
 | wheel_scroll_multiplier | 5.0 |
 
-* URL Handling
+** URL Handling
 URLs are double‑underlined; open with modifier+click using the default browser. Copy‑on‑select is enabled for efficiency.
 
 | Setting | Value |
@@ -79,7 +79,7 @@ URLs are double‑underlined; open with modifier+click using the default browser
 | open_url_with | default |
 | copy_on_select | yes |
 
-* Theme
+** Theme
 All colors are defined in an external file for easy switching.
 
 | Setting | Value |
