@@ -28,9 +28,13 @@ which is my primary instrument.
 |--------------------------------------------------------------|
 
 *** ~Emacs~ : editor
-[[file:docs/emacs-docs/index.org][documentation on emacs configuration]]
-[[file:docs/emacs-docs/why-emacs.org][why Emacs?]]
-*** ~Fish~  : shell
+| page             |                description                |
+|------------------+-------------------------------------------|
+|[[file:docs/emacs-docs/index.org][emacs docs]]        | detailed description of *Emacs* settings. |                                                     
+|[[file:docs/emacs-docs/why-emacs.org][why Emacs?]]        | reasons why I use *Emacs*                 |                                                        
+|--------------------------------------------------------------|
+
+[[file:docs/emacs-docs/index.org][*** ~Fish~  : shell
 [[file:docs/fish-docs/index.org][documentation on fish configuration]]
 [[file:docs/fish-docs/why-fish.org][why Fish?]]
 ** ~custom tools~
