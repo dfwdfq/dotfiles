@@ -2,11 +2,8 @@
 * Deep purple theme
 I use the same theme as in *Kitty*.
 
-* Emacs lisp stuff
-** init.el explained
-** welcome buffer
-** C stuff
-** extras for org
+* Custom keybindings
+[[file:custom-keybindings.org][custom keybindings explained]]
 
 * Why Emacs?
 [[file:why-emacs.org][reasons I use Emacs]]
