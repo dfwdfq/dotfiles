@@ -4,10 +4,10 @@
 * What's inside?
 ** ~Qtile~ : window manager
 ** The holy trinity
-Since I prefer /TUI over GUI/ I consider myself a terminal monk.
-I spend most of my time in terminal and listed below programs
-are holy trinity. *Terminal*, where I run my *shell* to perform
-most of operations and *editor* that is my primary instrument.
+Since I /prefer TUI over GUI/, I consider myself a _terminal monk_.
+I spend most of my time in the *terminal*, and the programs listed below are the holy trinity:
+the *terminal*, where I run my *shell* to perform most operations, and *the editor*,
+which is my primary instrument.
 *** ~kitty~ : terminal
 [[file:docs/kitty-docs/index.org][documentation on kitty configuration]]
 *** ~Emacs~ : editor
