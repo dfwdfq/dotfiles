@@ -1,4 +1,6 @@
 #+title: Principles
+Listed below statements should be considered as axioms.
+They are foundational and answers numerious questions *Why?*
 * 0. Terminal-first
 The terminal is primary workspace.
 * 1. Intentionality
