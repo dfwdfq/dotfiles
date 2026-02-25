@@ -43,6 +43,11 @@ which is my primary instrument.
 
 
 ** ~Other tools~
+Below are 2 sections. Section of /custom tools/ are written by
+me and solves particular tasks. They can be find on my Github.
+/Non custom tools/ are programs that can be found in standard
+repositories and therefore installed with package manager of
+choosen GNU/Linux distribution.
 |      link         |          description                     |
 |-------------------+------------------------------------------|
 |   [[file:docs/custom.org][custom tools]]    |  page contains list of custom tools      |
