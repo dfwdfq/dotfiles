@@ -3,7 +3,8 @@
 
 The main goal of this repository is to create *reproducible* custom user space for any GNU/Linux
 distribution I use. It's collection of *dotfiles*, *documentation* and *bootstrapping scripts*.
-*Personal Philosophy of computation* included.
+*Personal philosophy of computation* included.
+
 
 * What's inside?
 ** ~Qtile~ : window manager
@@ -33,5 +34,21 @@ They are required by some /dotfiles/. So they should be installed.
 This section describes ~non-custom~ programs, which can not
 be described as /batteries/, so they should be installed manually.
 [[file:docs/non-custom.org][tools I use]]
+
+* Bootstrapping
+* Personal philosophy of computation
+First, such a philosophy remains personal because there is no silver bullet and
+it's impossible to find a superposition that satisfies all existing user requirements.
+Second, why would someone seriously call it philosophy? To answer this question,
+one must understand the Unix philosophy—particularly as documented in *Eric Raymond's The Art of Unix Programming*.
+
+So to define my personal philosophy of computation I provide 3 documents:
+** Principles
+They answer multiple questions *Why?*
+** Rules
+They answer multiple questions *How?*
+** Goals
+They answer multiple questions *What?*
+* Assets
 
 
