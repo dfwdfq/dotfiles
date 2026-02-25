@@ -3,6 +3,11 @@
 
 * What's inside?
 ** ~Qtile~ : window manager
+I did not roll my own window manager for X server, so I use this one.
+*Window manager* is a component of *desktop environment*, and I use
+this one to build my own workflow.
+
+[[file:docs/qtile-docs/index.org][documentation on qtile configuration]]
 ** The holy trinity
 Since I /prefer TUI over GUI/, I consider myself a _terminal monk_.
 I spend most of my time in the *terminal*, and the programs listed below are the holy trinity:
