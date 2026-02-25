@@ -54,7 +54,7 @@ choosen GNU/Linux distribution.
 | [[file:docs/non-custom.org][non custom tools]]  |  page describes non custom tools         |
 
 
-* Notes on process of documentation creation process
+* Documentation
 In perfect world documentation is created automatically. We don't live in perfect world.
 |      link            |           description                     |
 |----------------------+-------------------------------------------|
@@ -70,15 +70,12 @@ Second, why would someone seriously call it philosophy? To answer this question,
 one must understand the Unix philosophy—particularly as documented in *Eric Raymond's The Art of Unix Programming*.
 
 So to define my personal philosophy of computation I provide *3 documents*:
-** Principles
-They answer multiple questions *Why?*
-[[file:docs/philosophy/principles.org][principles explained]]
-** Rules
-They answer multiple questions *How?*
-[[file:docs/philosophy/rules.org][rules explained]]
-** Goals
-They answer multiple questions *What?*
-[[file:docs/philosophy/goals.org][goals explained]]
+|      link            |          description                      |
+|----------------------+-------------------------------------------|
+| [[file:docs/philosophy/principles.org][principles explained]] |          *Why?*                           |
+| [[file:docs/philosophy/rules.org][rules explained]]      |          *How?*                           |
+| [[file:docs/philosophy/goals.org][goals explained]]      |          *What?*                          |
+
 * Assets
 
 
