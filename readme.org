@@ -37,12 +37,12 @@ be described as /batteries/, so they should be installed manually.
 
 * Bootstrapping
 * Personal philosophy of computation
-#+BEGIN_VERSE
 First, such a philosophy remains personal because there is no silver bullet and
 it's impossible to find a superposition that satisfies all existing user requirements.
+
 Second, why would someone seriously call it philosophy? To answer this question,
 one must understand the Unix philosophy—particularly as documented in *Eric Raymond's The Art of Unix Programming*.
-#+END_VERSE
+
 So to define my personal philosophy of computation I provide 3 documents:
 ** Principles
 They answer multiple questions *Why?*
