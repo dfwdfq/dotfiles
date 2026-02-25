@@ -1,1 +1,3 @@
 #+title: Kitty configuration
+* Deep purple theme
+[[file:deep-purple-theme.md][detailed overview]]
