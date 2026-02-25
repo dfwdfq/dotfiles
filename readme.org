@@ -79,6 +79,6 @@ So to define my personal philosophy of computation I provide *3 documents*:
 | [[file:docs/philosophy/rules.org][rules explained]]      |          *How?*                           |
 | [[file:docs/philosophy/goals.org][goals explained]]      |          *What?*                          |
 
-* Assets
+* Gallery
 
 
