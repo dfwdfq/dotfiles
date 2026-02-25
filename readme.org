@@ -1,6 +1,7 @@
 #+title: dotfiles
 #+author: dfwdfq
 
+
 * What's inside?
 ** ~Qtile~ : window manager
 I did not roll my own window manager for X server, so I use this one.
@@ -20,3 +21,11 @@ which is my primary instrument.
 *** ~Fish~  : shell
 [[file:docs/fish-docs/index.org][documentation on fish configuration]]
 
+** ~custom tools~
+List of programs written and used specifically by myself.
+*** smenu
+Application launcher based on /Raylib/. Written in C.
+[[https://github.com/dfwdfq/smenu][smenu repo]]
+*** choose
+Simple selection CLI selection tool. Written in C.
+[[https://github.com/dfwdfq/choose][choose repo]]
