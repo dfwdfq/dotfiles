@@ -66,9 +66,9 @@ In perfect world documentation is created automatically. We don't live in perfec
 |  [[file:docs/on-style.org][on docs style]]       |   notes about style of documentation      |
 
 * Bootstrapping
-|       link                      |           description                         |
-|---------------------------------+-----------------------------------------------|
-|  [[file:docs/general-bootstrapping.org][notes on general bootstrapping]] |                                               |
+|       link                      |           description                                          |
+|---------------------------------+----------------------------------------------------------------|
+|  [[file:docs/general-bootstrapping.org][notes on general bootstrapping]] | my thoughts on prefering bootstrap over creation of custom ISO |
 
 * Personal philosophy of computation
 First, such a philosophy remains personal because there is no silver bullet and
