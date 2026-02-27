@@ -1,5 +1,7 @@
 #+title: Qtile configuration
 
+** keybindings
+[[file:keybindings.org][list of existing custom keybindings]]
 
 ** Why Qtile?
 [[file:why-qtile.org][reasons why I use Qtile]]
