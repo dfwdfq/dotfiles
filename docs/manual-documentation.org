@@ -1,0 +1,11 @@
+#+title: manual documentation
+** What can not be automated?
+In perfect world ~entire user space~ can be documented using some custom script written in Perl, Python,
+Tcl, Ruby or whatever language you prefer(even bash). It's easy to generate documentation for any
+dotfile, because all you need to do is to choose comment format and everytime you add something new to
+your configuration file, just write comment that explains purpse and whatever you need to document.
+Then script parses dotfile into documentation file.
+Doxygene is good instrument to generate documentation for C++ project. ~SFML~ uses it, for example.
+But how can I document all tools I use? How can I separate system stuff and obvious stuff most GNU/Linux
+distros have from my specific tools? I see no way for it, so manual documentation is required to describe
+tools you use for specific tools. 
