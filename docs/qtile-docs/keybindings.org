@@ -1,0 +1,31 @@
+Keybindings:
+
+** keybinding ~mod + Return~ 
+*** purpose
+ launch terminal
+    
+
+** keybinding ~mod + w~ 
+*** purpose
+ kill focused window
+    
+
+** keybinding ~mod + r~ 
+*** purpose
+ spawn smenu
+    
+
+** keybinding ~mod + f~ 
+*** purpose
+ toggle fullscreen on focused window
+    
+
+** keybinding ~mod + control + r~ 
+*** purpose
+ reload config
+    
+
+** keybinding ~mod + control + q~ 
+*** purpose
+ shutdown qtile
+    
