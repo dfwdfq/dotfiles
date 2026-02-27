@@ -1,0 +1,93 @@
+#+title: dotfiles
+#+author: dfwdfq
+
+The main goal of this repository is to create *reproducible* custom user space for any GNU/Linux
+distribution I use. It's collection of *dotfiles*, *documentation* and *bootstrapping scripts*.
+*Personal philosophy of computation* included. 
+
+
+* What's inside?
+** ~Qtile~ : window manager
+I did not roll my own window manager for X server, so I use this one.
+*Window manager* is a component of *desktop environment*, and I use
+this one to build my own workflow. Maybe I will replace it with my own in future.
+
+| page                  |            description               |
+|-----------------------+--------------------------------------|
+| [[file:docs/qtile-docs/index.org][docs on qtile conf]]    | detailed explanation of qtile config |
+| [[file:docs/qtile-docs/why-qtile.org][why Qtile?]]            | reasons Why I use *Qtile*            |
+
+** ~The holy trinity~
+Since I /prefer TUI over GUI/, I consider myself a _terminal monk_.
+I spend most of my time in the *terminal*, and the programs listed below are the holy trinity:
+the *terminal*, where I run my *shell* to perform most operations, and *the editor*,
+which is my primary instrument.
+
+*** ~kitty~ : terminal
+| page             |                description                |
+|------------------+-------------------------------------------|
+|[[file:docs/kitty-docs/index.org][kitty docs]]        | detailed description of *Kitty* terminal. |
+|[[file:docs/kitty-docs/why-kitty.org][why kitty?]]        | reasons why I use *Kitty*.                |
+|--------------------------------------------------------------|
+
+*** ~Emacs~ : editor
+| page             |                description                |
+|------------------+-------------------------------------------|
+|[[file:docs/emacs-docs/index.org][emacs docs]]        | detailed description of *Emacs* settings. |                                                     
+|[[file:docs/emacs-docs/why-emacs.org][why Emacs?]]        | reasons why I use *Emacs*                 |                                                        
+|--------------------------------------------------------------|
+
+*** ~Fish~  : shell
+| page             |                description                |
+|------------------+-------------------------------------------|
+|[[file:docs/fish-docs/index.org][fish docs]]         | detailed description of *fish* shell.     |
+|[[file:docs/fish-docs/why-fish.org][why Fish?]]         | reasons why I use *Fish*                  |
+|--------------------------------------------------------------|
+
+
+** ~Other tools~
+Below are 2 sections. Section of /custom tools/ are written by
+me and solves particular tasks. They can be find on my Github.
+/Non custom tools/ are programs that can be found in standard
+repositories and therefore installed with package manager of
+choosen GNU/Linux distribution.
+|      link         |          description                     |
+|-------------------+------------------------------------------|
+|   [[file:docs/custom.org][custom tools]]    |  page contains list of custom tools      |
+| [[file:docs/non-custom.org][non custom tools]]  |  page describes non custom tools         |
+
+
+* Documentation
+In perfect world documentation is created automatically. We don't live in perfect world.
+|      link            |           description                     |
+|----------------------+-------------------------------------------|
+|  [[file:docs/manual-documentation.org][manual doc]]          |   notes on manual documentation process   |
+|  [[file:docs/automatic-documentation.org][automatic doc]]       |   notes on automatic documentation process|
+|  [[file:docs/on-style.org][on docs style]]       |   notes about style of documentation      |
+
+* Bootstrapping
+|       link                      |           description                                          |
+|---------------------------------+----------------------------------------------------------------|
+|  [[file:docs/general-bootstrapping.org][notes on general bootstrapping]] | my thoughts on prefering bootstrap over creation of custom ISO |
+
+* Personal philosophy of computation
+First, such a philosophy remains personal because there is no silver bullet and
+it's impossible to find a superposition that satisfies all existing user requirements.
+
+Second, why would someone seriously call it philosophy? To answer this question,
+one must understand the Unix philosophy—particularly as documented in *Eric Raymond's The Art of Unix Programming*.
+
+So to define my personal philosophy of computation I provide *3 documents*:
+|      link            |          description                      |
+|----------------------+-------------------------------------------|
+| [[file:docs/philosophy/principles.org][principles explained]] |          *Why?*                           |
+| [[file:docs/philosophy/rules.org][rules explained]]      |          *How?*                           |
+| [[file:docs/philosophy/goals.org][goals explained]]      |          *What?*                          |
+
+* Gallery
+/Click on the title to see screenshot./
+** [[file:gallery/background.png][wallpaper]]
+My custom wallpaper that is used as default background image.
+
+** [[file:gallery/emacs-welcome-buffer.png][Emacs welcome buffer]]
+The view of welcome buffer with ascii art and 2 buttons.

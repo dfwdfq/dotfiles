@@ -1,0 +1,16 @@
+#+title: Principles
+Listed below statements should be considered as axioms.
+They are foundational and answers numerious questions *Why?*
+
+** 0. Terminal-first
+The terminal is primary workspace.
+** 1. Intentionality
+Every element exists for a reason. Nothing is accidental.
+** 2. Minimalism
+Less is more. Complexity is avoided unless essential.
+** 3. Pragmatism
+Done is better than perfect. embrace "good enough".
+** 4. Reproducibility
+The environment must be rebuildable from version control.
+** 5. DRY(Don't Repeat Yourself)
+Eliminate duplication through abstraction

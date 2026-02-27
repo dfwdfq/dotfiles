@@ -1,0 +1,44 @@
+#+title: programs I use
+
+* Internet
+| Program    | Purpose                                |
+|------------+----------------------------------------|
+| curl       | Transfer data from or to a server      |
+| wget       | Non‑interactive network downloader     |
+| firefox    | Web browser                            |
+| yandex cli | CLI manager for yandex cloud
+
+* Multimedia
+| Program              | Purpose                  |
+|----------------------+--------------------------|
+| simplescreenrecorder | Screen recording utility |
+
+* Gaming / Compatibility
+| Program | Purpose                             |
+|---------+-------------------------------------|
+| wine    | Run Windows applications on Linux   |
+
+* Fun
+| Program | Purpose                                 |
+|---------+-----------------------------------------|
+| fortune | Display random fortune cookies          |
+| cowsay  | Configurable speaking/thinking cow      |
+
+* Development
+| Program | Purpose                                       |
+|---------+-----------------------------------------------|
+| git     | Distributed version control                   |
+| gdb     | GNU debugger                                  |
+| cmake   | Cross‑platform build system generator         |
+| cppcheck| Static analysis tool for C/C++ code           |
+| gcc     | GNU C compiler                                |
+| g++     | GNU C++ compiler                              |
+| make    | Build automation tool                         |
+| python  | Python interpreter                            |
+| racket  | Racket programming language                   |
+| pip     | Python package installer (python3-pip)        |
+
+* Containers
+| Program | Purpose                     |
+|---------+-----------------------------|
+| docker  | Container platform (docker.io) |

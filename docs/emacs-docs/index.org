@@ -1,0 +1,10 @@
+#+title: Emacs configuration
+** Deep purple theme
+I use the same theme as in *Kitty*.
+
+** Custom keybindings
+[[file:custom-keybindings.org][custom keybindings explained]]
+
+** Why Emacs?
+[[file:why-emacs.org][reasons I use Emacs]]
+

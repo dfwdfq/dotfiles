@@ -1,0 +1,5 @@
+#+title: Qtile configuration
+
+
+** Why Qtile?
+[[file:why-qtile.org][reasons why I use Qtile]]

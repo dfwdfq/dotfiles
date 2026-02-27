@@ -1,0 +1,148 @@
+#+title: Kitty variables
+
+** variable name ~font_family~ 
+*** purpose
+defines fonts for terminal text
+*** value
+JetBrains Mono    
+    
+
+** variable name ~bold_font~ 
+*** purpose
+defines bold style of text
+*** value
+auto    
+    
+
+** variable name ~italic_font~ 
+*** purpose
+defines italic style of text
+*** value
+auto    
+    
+
+** variable name ~font_size~ 
+*** purpose
+defines size of font
+*** value
+20.0    
+    
+
+** variable name ~kitty_mod~ 
+*** purpose
+mod key used for kitty features
+*** value
+ctrl+shift    
+    
+
+** variable name ~mouse_hide_wait~ 
+*** purpose
+hide the mouse cursor after 3 seconds of inactivity to reduce visual clutter.
+*** value
+3.0    
+    
+
+** variable name ~enable_audio_bell~ 
+*** purpose
+disable lame audio bell sound
+*** value
+no    
+    
+
+** variable name ~visual_bell_duration~ 
+*** purpose
+time of visual bell duration
+*** value
+1.0    
+    
+
+** variable name ~remember_window_size~ 
+*** purpose
+Kitty remembers the window size between launches.
+*** value
+yes    
+    
+
+** variable name ~initial_window_width~ 
+*** purpose
+window width at startup
+*** value
+1200    
+    
+
+** variable name ~initial_window_height~ 
+*** purpose
+window height at startup
+*** value
+800    
+    
+
+** variable name ~repaint_delay~ 
+*** purpose
+to reduce latency
+*** value
+10    
+    
+
+** variable name ~input_delay~ 
+*** purpose
+?
+*** value
+3    
+    
+
+** variable name ~sync_to_monitor~ 
+*** purpose
+Sync-to-monitor prevents tearing.
+*** value
+yes    
+    
+
+** variable name ~cursor_shape~ 
+*** purpose
+steady block cursor (no blink)
+*** value
+block    
+    
+
+** variable name ~cursor_blink_interval~ 
+*** purpose
+?
+*** value
+0    
+    
+
+** variable name ~scrollback_lines~ 
+*** purpose
+defines length of scrollback history
+*** value
+10000    
+    
+
+** variable name ~wheel_scroll_multiplier~ 
+*** purpose
+mouse wheel scrolls faster for quick navigation
+*** value
+5.0    
+    
+
+** variable name ~url_style~ 
+*** purpose
+URLs are double‑underlined
+*** value
+double    
+    
+
+** variable name ~open_url_modifiers~ 
+*** purpose
+open with modifier+click using the default browser
+*** value
+kitty_mod    
+    
+
+** variable name ~copy_on_select~ 
+*** purpose
+Copy‑on‑select is enabled for efficiency.
+*** value
+yes    
+    

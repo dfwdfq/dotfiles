@@ -1,0 +1,13 @@
+#+title: Why Qtile?
+The obvious implication from my philosophy is keyboard preference. I simply detest using
+mouse, because all interaction with system can be done using keyboard. That's why I prefer
+keyboard-oriented tiling window managers.
+
+My first tiling WM was *i3*. I switched to *AwesomeWM*. Also there was short time when I runned
+Wayland and my compositor was *River*.
+If *River* could be X server WM, I would run it, because you can configure it in any language you
+want, because you can communicate with *riverctl* in any language: C, python, bash.
+
+** 0. Python
+To be honest I have only single reason to use Qtile. It's written and configured in /Python/.
+

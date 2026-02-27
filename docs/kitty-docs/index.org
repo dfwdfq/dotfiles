@@ -1,0 +1,9 @@
+#+title: Kitty configuration
+** .conf explained
+[[file:kitty.org][detailed overview of existing configuration]]
+
+** Deep purple theme
+[[file:deep-purple-theme.md][detailed overview]]
+
+** Why Kitty?
+[[file:why-kitty.org][reasons why I use Kitty]]

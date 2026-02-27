@@ -1,0 +1,39 @@
+#+title: Automantic documentation
+** Don't explain official documentation
+The entire point of automatic documentation is to explain
+custom configurations. Documentation should cover things
+you can not find in official manual. So generated documentation
+will be relatively small.
+
+** One format to rule them all
+It's not a big deal to automate process of documentation.
+First, you need to define specific language in flavour of
+*Doxygene*. You write comments following strict rules, which
+represent your *documentational DSL*. 
+
+** Parsing dotfiles
+Once you defined *documentational DSL*, you need to implement
+tool or write simple script that parses dotfiles and generates
+documentation. *Perl* felt very natural as language I could
+use to write a parser, but since I'm not very familiar with it,
+I deicided to use *Python*. In short time I wrote bunch of dirty
+scripts, doing well their job - generating documentation.
+
+** Documentational DSL
+*Documentational domain specific language* is primitive declarative language
+that defines format of comments. It's good, if writing a parser that extracts
+data from dotfiles doesn't become a /Leetcoode/ problem of *hard level*.
+*** structure
+**** Rule 0:
+documentation represents a sequence of pairs: /keys/ and /values/.
+Such sequences define groups.
+**** Rule 1:
+Each pair is placed on new line.
+**** Rule 2:
+Each pair starts with *#* character
+**** Rule 3:
+If /dotfile/ supposes to have more than just 1 group, then it should ends with *#.*
+**** Rule 4:
+I prefer *:* character to separate /key/ from /value/.
+
+
