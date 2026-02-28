@@ -1,5 +1,6 @@
 #+title: dotfiles
 #+author: dfwdfq
+#+OPTIONS: toc:2
 
 The main goal of this repository is to create *reproducible* custom user space for any GNU/Linux
 distribution I use. It's collection of *dotfiles*, *documentation* and *bootstrapping scripts*.

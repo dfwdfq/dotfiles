@@ -13,10 +13,18 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
 
-    
+
 mod = "mod4"
 terminal = guess_terminal()
 
+keybindings_docs = """
+mod + Return: launch terminal
+mod + w: kill focused window
+mod + r: spawn smenu
+mod + f: toggle fullscreen on focused window
+mod + control + r: reload config
+mod + control + q: shutdown qtile
+"""
 keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
