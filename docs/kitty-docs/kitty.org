@@ -146,3 +146,17 @@ Copy‑on‑select is enabled for efficiency.
 *** value
 yes    
     
+
+** variable name ~tab_bar_style~ 
+*** purpose
+style of tab
+*** value
+powerline    
+    
+
+** variable name ~tab_powerline_style~ 
+*** purpose
+tab style
+*** value
+round    
+    
