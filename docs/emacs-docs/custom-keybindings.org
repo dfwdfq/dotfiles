@@ -1,26 +1,26 @@
 #+title: Custom keybindings
 
-** ~C-x a~ keybinding
+** ~C-x a~
 *** purpose
 move to beginning of buffer.    
     
 
-** ~C-x e~ keybinding
+** ~C-x e~
 *** purpose
 move to end of buffer    
     
 
-** ~C-q~ keybinding
+** ~C-q~
 *** purpose
 complete suggestion.    
     
 
-** ~M-v v~ keybinding
+** ~M-v v~
 *** purpose
 insert verse in org-mode.    
     
 
-** ~M-v c~ keybinding
+** ~M-v c~
 *** purpose
 insert source in org-mode.    
     
