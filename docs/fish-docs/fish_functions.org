@@ -21,6 +21,13 @@ push changes to Github repository using token from docs directory.
 Github repository, repository branch
     
 
+** ~gendoc~ function
+*** purpose
+re-generate all documentation for dotfiles
+*** arguments
+none
+    
+
 ** ~clipcat~ function
 *** purpose
 put passed files into X clipboard.
