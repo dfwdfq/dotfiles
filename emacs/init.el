@@ -46,6 +46,7 @@
      (goto-char (point-max))))
 
 ;; Bind C-x-a to move to the beginning of the buffer
+
 ;;#keybinding: C-x a
 ;;#description: move to beginning of buffer.
 ;;#.
