@@ -1,15 +1,15 @@
 #+title: fish functions
 
-** ~clipcat~ function
+** ~mkcd~ function
 *** purpose
-put passed files into X clipboard.
+make directory and then change current directory to just created one.
 *** arguments
-any
+directory
     
 
-** ~tell~ function
+** ~jump~ function
 *** purpose
-print to STDOUT content of X clipboard.
+quickly change directory from list.
 *** arguments
 none
     
@@ -21,16 +21,16 @@ push changes to Github repository using token from docs directory.
 Github repository, repository branch
     
 
-** ~mkcd~ function
+** ~clipcat~ function
 *** purpose
-make directory and then change current directory to just created one.
+put passed files into X clipboard.
 *** arguments
-directory
+any
     
 
-** ~jump~ function
+** ~tell~ function
 *** purpose
-quickly change directory from list.
+print to STDOUT content of X clipboard.
 *** arguments
 none
     
