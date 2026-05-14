@@ -1,24 +1,10 @@
 #+title: fish functions
 
-** ~mkcd~ function
+** ~back~ function
 *** purpose
-make directory and then change current directory to just created one.
+instead of cd ../.. or cd ../../../ and so on.
 *** arguments
-directory
-    
-
-** ~jump~ function
-*** purpose
-quickly change directory from list.
-*** arguments
-none
-    
-
-** ~gpush~ function
-*** purpose
-push changes to Github repository using token from docs directory.
-*** arguments
-Github repository, repository branch
+number
     
 
 ** ~gendoc~ function
@@ -42,9 +28,30 @@ print to STDOUT content of X clipboard.
 none
     
 
-** ~back~ function
+** ~gpush~ function
 *** purpose
-instead of cd ../.. or cd ../../../ and so on.
+push changes to Github repository using token from docs directory.
 *** arguments
-number
+Github repository, repository branch
+    
+
+** ~mkcd~ function
+*** purpose
+make directory and then change current directory to just created one.
+*** arguments
+directory
+    
+
+** ~jump~ function
+*** purpose
+quickly change directory from list.
+*** arguments
+none
+    
+
+** ~cf~ function
+*** purpose
+invoke kitten to choose files
+*** arguments
+none
     
