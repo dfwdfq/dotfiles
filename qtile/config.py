@@ -13,6 +13,13 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
 
+@hook.subscribe.startup_once
+def set_keyboard_layout():
+    subprocess.run([
+        "setxkbmap",
+        "-layout", "us,ru",          
+        "-option", "grp:alt_shift_toggle"  
+    ])    
 
 mod = "mod4"
 terminal = guess_terminal()
