@@ -84,6 +84,8 @@
 
 ;;load my stuff for working in C
 (load "~/.config/emacs/lisp/c_stuff.el")
+;;load common functions
+(load "~/.config/emacs/lisp/common.el")
 
 
 (setq scheme-program-name "~/tinyscheme-1.42/scheme")
