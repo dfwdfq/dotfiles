@@ -93,7 +93,7 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("SEX, DRUGS & GNU/LINUX",foreground="#ff6bff", name="default"),
+                #widget.TextBox("SEX, DRUGS & GNU/LINUX",foreground="#ff6bff", name="default"),
                 widget.Clock(format="%H:%M", foreground="#e0e0ff"),
             ],
             24,
