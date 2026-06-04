@@ -3,6 +3,7 @@ import subprocess
 
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget, hook
+from libqtile.widget import Battery
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -85,7 +86,6 @@ screens = [
         bottom=bar.Bar(
             [
                 widget.GroupBox(),
-                #widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
                     chords_colors={
@@ -93,7 +93,7 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                #widget.TextBox("SEX, DRUGS & GNU/LINUX",foreground="#ff6bff", name="default"),
+                Battery(format="🔋{percent:2.0%}"),
                 widget.Clock(format="%H:%M", foreground="#e0e0ff"),
             ],
             24,
