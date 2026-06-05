@@ -15,6 +15,10 @@ def autostart():
     subprocess.call(home)
 
 @hook.subscribe.startup_once
+def start_picom():
+    os.system("picom &")
+    
+@hook.subscribe.startup_once
 def set_keyboard_layout():
     subprocess.run([
         "setxkbmap",
