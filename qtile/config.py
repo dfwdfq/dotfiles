@@ -34,6 +34,8 @@ mod + control + r: reload config
 mod + control + q: shutdown qtile
 """
 keys = [
+    Key([mod], "j", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.down()),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "r", lazy.spawn("smenu"), desc="Spawn smenu"),
