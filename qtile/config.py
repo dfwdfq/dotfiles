@@ -25,7 +25,7 @@ def set_keyboard_layout():
         "-layout", "us,ru",          
         "-option", "grp:alt_shift_toggle"  
     ])    
-
+    
 mod = "mod4"
 terminal = guess_terminal()
 
@@ -39,7 +39,7 @@ mod + control + q: shutdown qtile
 """
 keys = [
     Key([mod], "j", lazy.layout.down()),
-    Key([mod], "k", lazy.layout.down()),
+    Key([mod], "k", lazy.layout.up()),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "r", lazy.spawn("smenu"), desc="Spawn smenu"),
@@ -77,7 +77,6 @@ for i in groups:
 layouts = [
     layout.Max(border_width=0)
 ]
-
 
 widget_defaults = dict(
     font="JetBrains Mono",
