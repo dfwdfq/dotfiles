@@ -1,4 +1,4 @@
-#function name: jump
+#function name: j
 #arguments: none
 #purpose: quickly change directory from list.
 function j
