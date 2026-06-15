@@ -2,5 +2,5 @@
 #arguments: none
 #purpose: quickly change directory from list.
 function j
-  eval cd (cat ~/.config/jump.conf | choose)
+  eval cd (cat ~/.config/jump.conf | fzf)
 end
