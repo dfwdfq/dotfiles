@@ -69,10 +69,14 @@
           (let ((button-padding (max 0 (/ (- window-width 20) 2)))) ; Adjust for button width
 	    
             (insert (make-string button-padding ? ))
-            (make-button "[Write Org Note]" #'create-note)
+            (make-button "[Write Org  Note]" #'create-note)
             (insert "\n")
 	    (insert (make-string button-padding ? ))
+	    (make-button "[Write TODO-list]" #'create-todo)
+	    (insert "\n")
+	    (insert (make-string button-padding ? ))
 	    (make-button "[Open .emacs]" #'open-config)
+
 	    
 	    ;;(insert (make-string button-padding ? ))
             ;;(make-button "[See Dot Files]" #'dotfiles-manager)
