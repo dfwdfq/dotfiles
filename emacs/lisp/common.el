@@ -19,3 +19,21 @@
     (insert "#+title: " title "\n")
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")
     (insert "#+TAGS: ")))
+
+(defun create-todo ()
+  "Ask user for todo list filename."
+  (interactive)
+  (let* ((filename (read-string "Enter filename (no .org):"))
+	 (title filename)
+	 (default-dir "~/docs/todos/"))
+
+        ;; Add .org extension if not present
+    (unless (string-match "\\.[a-zA-Z]+$" filename)
+      (setq filename (concat filename ".org")))
+
+    (find-file (expand-file-name filename default-dir))
+    (insert "#+title: " title "\n")
+    (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")))
+    
+
+    
