@@ -108,6 +108,7 @@ screens = [
                     },
                     name_transform=lambda name: name.upper(),
                 ),
+                widget.TextBox("this is YOUR TODO!",foreground="#ff6bff",name="TODO_TITLE"),
                 Battery(format="🔋{percent:2.0%}"),
                 widget.Clock(format="%H:%M", foreground="#e0e0ff"),
             ],
