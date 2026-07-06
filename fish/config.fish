@@ -16,6 +16,7 @@ set -gx BROWSER firefox
 
 if status is-interactive
     fortune | cowsay
+    fish ~/.config/scripts/todo.fish
 end
 
 set -gx FZF_DEFAULT_OPTS "
