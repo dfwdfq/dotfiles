@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 die "usage: change-status.pl <TODO-entry> [TODO|DONE]" if ($#ARGV != 1);
-open(my $todol, ">", "/tmp/todol") or die "/tmp/todol fucked!";
+open(my $todol, ">", "/tmp/todol") or die "/tmp/todol fucked! $!";
 
 my $status = $ARGV[1];
 die "$status should be [TODO|DONE]!" unless($status =~ /DONE|TODO/);
