@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-kitty --title fkitty --config /home/uncle_joe/.config/kitty/fkitty.conf
