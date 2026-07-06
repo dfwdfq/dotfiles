@@ -1,10 +1,11 @@
 #!/usr/bin/env fish
 
 set todol ~/docs/todos/current.org
+set this /home/uncle_joe/.config/scripts
 
 set finished (cat $todol | fzf --tac)
-cat $todol | ./change-status.pl $finished DONE
+cat $todol | perl $this/change-status.pl $finished DONE
 cat /tmp/todol > $todol
 echo "task status updated!"
-./set-todo.fish "NO TODO!"
+fish $this/set-todo.fish "NO TODO!"
 rm /tmp/todol
