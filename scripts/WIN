@@ -1,0 +1,10 @@
+#!/usr/bin/env fish
+
+set todol ~/docs/todos/current.org
+
+set finished (cat $todol | fzf --tac)
+cat $todol | ./change-status.pl $finished DONE
+cat /tmp/todol > $todol
+echo "task status updated!"
+./set-todo.fish "NO TODO!"
+rm /tmp/todol
