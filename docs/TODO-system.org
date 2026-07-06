@@ -1,0 +1,9 @@
+#+title: TODO-system
+* system startup
+Special =fkitty= window is invoked with TODO-list.
+I choose task for today. Task label appears at status bar.
+* =DONE= command
+#+BEGIN_SRC bash
+=DONE= usage: DONE <description>
+#+END_SRC
+use DONE to describe what particular step was DONE
