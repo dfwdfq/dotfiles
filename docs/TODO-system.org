@@ -7,3 +7,7 @@ I choose task for today. Task label appears at status bar.
 =DONE= usage: DONE <description>
 #+END_SRC
 use DONE to describe what particular step was DONE
+* =WIN= command
+set status =DONE= that indicates that task is finished.
+* =UNWIN= command
+restore previous =TODO= status.
