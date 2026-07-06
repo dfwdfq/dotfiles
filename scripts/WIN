@@ -3,7 +3,12 @@
 set todol ~/docs/todos/current.org
 set this /home/uncle_joe/.config/scripts
 
-set finished (cat $todol | fzf --tac)
+if test -f ~/.current_todo
+   echo "~/.current_todo fucked!"
+   return 1
+end   
+
+set finished (cat ~/.current_todo)
 cat $todol | perl $this/change-status.pl $finished DONE
 cat /tmp/todol > $todol
 echo "task status updated!"
