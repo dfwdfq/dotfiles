@@ -6,6 +6,7 @@ from libqtile import bar, layout, qtile, widget, hook
 from libqtile.widget import Battery
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
+from libqtile.layout.floating import Floating
 from libqtile.utils import guess_terminal
 
 
@@ -14,6 +15,15 @@ def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
 
+@hook.subscribe.client_new
+def center_floating_win(window):
+    wm_name = window.cmd_inspect()["name"]
+    if wm_name == "fkitty":
+        window.toggle_floating()
+        window.cmd_set_size_floating(640, 480)
+        window.cmd_set_position_floating(100,100)
+        #window.cmd_set_position_floating((1366 - 301) // 2, (768 - 227) // 2)
+    
 @hook.subscribe.startup_once
 def start_picom():
     os.system("picom &")
@@ -45,7 +55,7 @@ keys = [
     Key([mod], "r", lazy.spawn("smenu"), desc="Spawn smenu"),
     Key([mod],"f",lazy.window.toggle_fullscreen(),desc="Toggle fullscreen on the focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
+    Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile")
 ]
 
 groups = [Group(i) for i in "1234"]
