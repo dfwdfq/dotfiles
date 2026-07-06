@@ -64,7 +64,7 @@
 (require 'org-extras)
 
 ;; Display welcome buffer on startup
-(add-hook 'emacs-startup-hook #'display-welcome-buffer)
+(add-hook 'server-after-make-frame-hook #'display-welcome-buffer)
 
 (setq inhibit-startup-screen t)
 
