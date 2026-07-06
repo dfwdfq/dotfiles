@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+./DONE.py $argv
+
+if test $status = 67
+   set ch_todo (batcat ~/docs/todos/current.org --style=grid | fzf +s)
+end
