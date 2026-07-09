@@ -34,6 +34,9 @@
     (find-file (expand-file-name filename default-dir))
     (insert "#+title: " title "\n")
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")))
-    
 
+(defun open-inbox ()
+  "open todos/inbox.org"
+  (interactive)
+  (find-file "~/docs/todos/inbox.org"))
     

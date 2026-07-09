@@ -75,7 +75,11 @@
 	    (make-button "[Write TODO-list]" #'create-todo)
 	    (insert "\n")
 	    (insert (make-string button-padding ? ))
+	    (make-button "[Open TODO-inbox]" #'open-inbox)
+	    (insert "\n")
+	    (insert (make-string button-padding ? ))
 	    (make-button "[Open .emacs]" #'open-config)
+	    
 
 	    
 	    ;;(insert (make-string button-padding ? ))
