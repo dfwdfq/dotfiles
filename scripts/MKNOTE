@@ -1,0 +1,19 @@
+#!/usr/bin/env fish
+
+set curr_t (cat ~/.current_todo)
+if test "$curr_t" = "NO TODO!"
+   echo "error: can not create file for no task!"
+   return 1
+end
+
+set hash (echo -n $curr_t | sha256sum | awk '{print $1}')
+
+if test -f ~/docs/todos/$hash.org
+   printf "error: associated file for task already created!\n\t\t\tuse RNOTE to read it!\n"
+   return 1
+end
+
+touch ~/docs/todos/$hash.org
+echo "#+title: $curr_t" > ~/docs/todos/$hash.org
+echo "created associated note: ~/docs/todos/$hash.org"
+

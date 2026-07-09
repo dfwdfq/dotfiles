@@ -1,0 +1,16 @@
+#!/usr/bin/env fish
+
+set curr_t (cat ~/.current_todo)
+if test "$curr_t" = "NO TODO!"
+   echo "error: can not read note for no task!"
+   return 1
+end
+
+set hash (echo -n $curr_t | sha256sum | awk '{print $1}')
+
+if not test -f ~/docs/todos/$hash.org
+  echo "error: can not read note!"
+  return 1
+end
+
+emacs ~/docs/todos/$hash.org
