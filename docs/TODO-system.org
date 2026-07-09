@@ -11,3 +11,7 @@ use DONE to describe what particular step was DONE
 set status =DONE= that indicates that task is finished.
 * =UNWIN= command
 restore previous =TODO= status.
+* =MKNOTE= command
+create associated note for current task.
+* =RNOTE= command
+open in emacs note for current task.
