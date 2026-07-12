@@ -156,7 +156,6 @@
     (message "getting your shit together once more!")
     (insert-common-info)
     (org-mode)
-    (beginning-of-buffer)
-    (read-only-mode t)))
+    (beginning-of-buffer)))
 
 (provide 'diary-buffer)
