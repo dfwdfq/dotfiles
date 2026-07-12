@@ -35,7 +35,7 @@
 (defvar all-dirs-names (list-unite category-dirs-names special-dirs-names))
 
 (defun max-len (lss)
-  (length (get-longest all-dirs-names)))
+  (length (get-longest lss)))
 
 
 
@@ -83,7 +83,7 @@
 	(* n -1)
       n))
 (defun align (s ls)
-  (concat (if (= (length s) max-len) " " " ")
+  (concat (if (= (length s) (max-len ls)) " " " ")
   (make-string
    (ABS (- (max-len ls) (length s)))
    ?\s)))
@@ -108,7 +108,7 @@
   (mapcar
    #'(lambda (x) (insert "** "
 			 x
-			 (align x ls)
+			 (align x all-dirs-names)
 			 (make-green tag)
 			 (align-tag tag)
  			 (insert-dir-link x)
@@ -122,7 +122,7 @@
    #'(lambda (x)
        (insert "  - "
 	       (car x)
-;;	       (align (car x))
+	       (align (car x) ls)
 	       " :: used "
 	       (number-to-string (cdr x))
 	       " /times/\n"))
