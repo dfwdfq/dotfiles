@@ -1,5 +1,9 @@
 (load (expand-file-name "~/.config/emacs/lisp/docs.el"))
+(load (expand-file-name "~/.config/emacs/lisp/notes.el"))
 (require 'docs)
+(require 'notes)
+
+
 
 
 (defun get-longest (ls)
@@ -25,20 +29,63 @@
    ls))
 
 
+
 (defvar category-dirs-names (dirs-names category-dirs))
 (defvar special-dirs-names (dirs-names special-dirs))
-(defvar all-dirs-names (seq-concatenate 'list category-dirs-names special-dirs-names))
-(defvar max-len (length (get-longest all-dirs-names)))
-(defvar min-len (length (get-shortest all-dirs-names)))
+(defvar all-dirs-names (list-unite category-dirs-names special-dirs-names))
+
+(defun max-len (lss)
+  (length (get-longest all-dirs-names)))
+
+
+
+(defvar tags-all-raw
+  (list-utils-flatten (mapcar
+		       #'note-tags
+		       all-org-files)))
+(defun tag-freq-count (tag)
+  (seq-count
+   #'(lambda (x)
+       (if (string= x tag) t nil))
+   tags-all-raw))
+
+(defvar tags
+  (let* ((vals (seq-uniq tags-all-raw))
+	 (pairs (mapcar
+		 #'(lambda (tag)
+		     (cons tag (tag-freq-count tag)))
+		 vals)))
+    (cdr
+     (sort
+      pairs
+      (lambda (x y) (> (cdr x) (cdr y)))))))
+
+(defun high-freq-p (e)
+  (> (cdr e) 50))
+(defun med-freq-p (e)
+  (and 
+   (> (cdr e) 20)
+   (not (high-freq-p e))))
+(defun low-freq-p (e)
+  (and
+   (not (high-freq-p e))
+   (not (med-freq-p e))))
+
+(defvar high-freq-tags
+  (seq-filter #'high-freq-p tags))
+(defvar med-freq-tags
+  (seq-filter #'med-freq-p tags))
+(defvar low-freq-tags
+  (seq-filter #'low-freq-p tags))
 
 (defun ABS (n)
     (if (<= n 0)
 	(* n -1)
       n))
-(defun align (s)
+(defun align (s ls)
   (concat (if (= (length s) max-len) " " " ")
   (make-string
-   (ABS (- max-len (length s)))
+   (ABS (- (max-len ls) (length s)))
    ?\s)))
 (defun align-tag (tag)
   (if (string= tag ":category:")
@@ -61,7 +108,7 @@
   (mapcar
    #'(lambda (x) (insert "** "
 			 x
-			 (align x)
+			 (align x ls)
 			 (make-green tag)
 			 (align-tag tag)
  			 (insert-dir-link x)
@@ -69,6 +116,16 @@
 			 (insert-dir-size x)
 			 "\n"
 			 ))
+   ls))
+(defun insert-tags-list (ls)
+  (mapcar
+   #'(lambda (x)
+       (insert "  - "
+	       (car x)
+;;	       (align (car x))
+	       " :: used "
+	       (number-to-string (cdr x))
+	       " /times/\n"))
    ls))
 
 (defun insert-common-info ()
@@ -78,6 +135,10 @@
     (insert "* Directories \n")
     (insert-list category-dirs-names ":category:")
     (insert-list special-dirs-names ":special:")
+;;    (insert "* Tags \n")
+;;    (insert "** High frequency \n")
+    ;(setq max-len (length (get-longest (mapcar #'car high-freq-tags))))
+;;    (insert-tags-list high-freq-tags)
     )) 
     
 
