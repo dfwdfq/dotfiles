@@ -122,7 +122,7 @@
    #'(lambda (x)
        (insert "  - "
 	       (car x)
-	       (align (car x) ls)
+	       (align (car x) (mapcar #'car ls))
 	       " :: used "
 	       (number-to-string (cdr x))
 	       " /times/\n"))
@@ -135,10 +135,9 @@
     (insert "* Directories \n")
     (insert-list category-dirs-names ":category:")
     (insert-list special-dirs-names ":special:")
-;;    (insert "* Tags \n")
-;;    (insert "** High frequency \n")
-    ;(setq max-len (length (get-longest (mapcar #'car high-freq-tags))))
-;;    (insert-tags-list high-freq-tags)
+    (insert "* Tags \n")
+    (insert "** High frequency \n")
+    (insert-tags-list high-freq-tags)
     )) 
     
 
