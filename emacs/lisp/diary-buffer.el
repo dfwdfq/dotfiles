@@ -100,9 +100,11 @@
    (number-to-string (dir-length (full-dir-path s)))
    "n"))
 (defun insert-dir-link (s)
-  (concat
-   "[[" (full-dir-path s) "]"
-   "[OPEN]]" ))
+  (propertize
+   (concat
+    "[[" (full-dir-path s) "]"
+    "[OPEN]]")
+   'inhibit-read-only f))
 
 (defun insert-list (ls tag)
   (mapcar
@@ -138,6 +140,10 @@
     (insert "* Tags \n")
     (insert "** High frequency \n")
     (insert-tags-list high-freq-tags)
+    (insert "** Medium frequency \n")
+    (insert-tags-list med-freq-tags)
+    (insert "** Low frequency \n")
+    (insert-tags-list low-freq-tags)
     )) 
     
 
@@ -151,6 +157,8 @@
     (erase-buffer)
     (message "getting your shit together once more!")
     (insert-common-info)
-    (org-mode)))
+    (org-mode)
+    (beginning-of-buffer)
+    (read-only-mode t)))
 
 (provide 'diary-buffer)
