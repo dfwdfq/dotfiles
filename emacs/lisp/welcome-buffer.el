@@ -1,4 +1,5 @@
 (load "~/.config/emacs/lisp/common.el")
+(load "~/.config/emacs/lisp/diary-buffer.el")
 ;;#variable: welcome-logo
 ;;#description: ascii-art for welcome buffer
 ;;#.
@@ -79,7 +80,9 @@
 	    (insert "\n")
 	    (insert (make-string button-padding ? ))
 	    (make-button "[Open .emacs]" #'open-config)
-	    
+	    (insert "\n")
+	    (insert (make-string button-padding ? ))
+	    (make-button "[Manage diary]" #'manage-diary)
 
 	    
 	    ;;(insert (make-string button-padding ? ))

@@ -11,7 +11,6 @@
 (global-font-lock-mode t)
 
 
-
 (defun open-config ()
   (interactive)
   (find-file "~/.config/emacs/init.el"))
