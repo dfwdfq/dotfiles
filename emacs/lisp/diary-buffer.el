@@ -100,11 +100,9 @@
    (number-to-string (dir-length (full-dir-path s)))
    "n"))
 (defun insert-dir-link (s)
-  (propertize
    (concat
     "[[" (full-dir-path s) "]"
-    "[OPEN]]")
-   'inhibit-read-only f))
+    "[OPEN]]"))
 
 (defun insert-list (ls tag)
   (mapcar
