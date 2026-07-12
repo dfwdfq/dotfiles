@@ -1135,3 +1135,12 @@ This functionality overlaps with the undocumented `cl-do-remf'."
 ;;
 
 ;;; list-utils.el ends here
+
+;;; my addition
+(defun list-unite (l1 l2)
+  (seq-concatenate 'list l1 l2))
+(defun list-pair-up (l1 l2)
+  (if (or (null l1) (null l2)) '()
+    (cons
+     (cons (car l1) (car l2))
+     (list-pair-up (cdr l1) (cdr l2)))))
