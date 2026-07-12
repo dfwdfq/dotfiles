@@ -1,3 +1,4 @@
+(require 'list-utils)
 (defconst root-dir "~/docs" "the diary entrance")
 (defconst org-file-regex  ".*\.org" "matches any org file")
 
@@ -66,5 +67,20 @@
     #'dir-length
     sub-root-dirs)
    0))
+
+(defun flat-dir-org-files (dir-name)
+  (list-utils-flatten
+   (directory-files-recursively dir-name org-file-regex)))
+
+(defvar all-org-files
+  (seq-filter
+   #'file-readable-p
+   (seq-reduce
+    (lambda (x y)
+      (seq-concatenate 'list x y))
+    (mapcar
+     #'flat-dir-org-files
+     sub-root-dirs)
+    '())))
 
 (provide 'docs)
