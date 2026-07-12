@@ -143,3 +143,4 @@
 ;;#description: open buffer with fzf
 ;;#.
 (global-set-key (kbd "<f1>") 'fzf-switch-buffer)
+(global-set-key (kbd "C-x C-f") 'fzf-find-file)
