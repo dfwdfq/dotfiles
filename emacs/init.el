@@ -144,3 +144,27 @@
 ;;#.
 (global-set-key (kbd "<f1>") 'fzf-switch-buffer)
 (global-set-key (kbd "C-x C-f") 'fzf-find-file)
+
+
+(defun my/jump-to-point-right ()
+  "jump to next . in file righter from cursor"
+  (interactive)
+  (if (equal major-mode 'org-mode)
+      (progn
+       (skip-chars-forward "^[.]")
+       (forward-char))
+    (org-cycle)))
+
+
+(defun my/jump-to-point-left ()
+  "jump to next . in file lefter from cursor"
+  (interactive)
+  (if (equal major-mode 'org-mode)
+      (progn
+       (skip-chars-backward "^[.]")
+       (backward-char))
+    (org-cycle)))
+
+
+(define-key org-mode-map (kbd "C-x p") 'my/jump-to-point-right)
+(define-key org-mode-map (kbd "C-x n") 'my/jump-to-point-left)
