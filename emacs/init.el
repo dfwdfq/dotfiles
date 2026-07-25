@@ -140,10 +140,14 @@
          )))
 
 ;;#keybinding: F1
-;;#description: open buffer with fzf
+;;#description: open buffer-switcher with fzf
 ;;#.
 (global-set-key (kbd "<f1>") 'fzf-switch-buffer)
-(global-set-key (kbd "C-x C-f") 'fzf-find-file)
+
+;;#keybinding: C-x C-f
+;;#description: find file with fzf
+;;#.
+(global-set-key (kbd "C-x C-f") 'fzf-find-file-in-dir)
 
 
 (defun my/jump-to-point-right ()
