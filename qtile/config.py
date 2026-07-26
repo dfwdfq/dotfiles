@@ -1,6 +1,7 @@
 import os
 import subprocess
 
+import io
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget, hook
 from libqtile.widget import Battery
@@ -8,22 +9,28 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.layout.floating import Floating
 from libqtile.utils import guess_terminal
+from libqtile.log_utils import logger
+
 
 
 @hook.subscribe.startup_once
 def autostart():
     home = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call(home)
-
-@hook.subscribe.client_new
-def center_floating_win(window):
-    wm_name = window.cmd_inspect()["name"]
-    if wm_name == "fkitty":
-        window.toggle_floating()
-        window.cmd_set_size_floating(640, 480)
-        window.cmd_set_position_floating(100,100)
-        #window.cmd_set_position_floating((1366 - 301) // 2, (768 - 227) // 2)
     
+@hook.subscribe.client_managed
+def center_floating_win(window):
+    logger.warning("center_floating_win invoked!")
+    try:
+        wm_name = window.name
+        logger.warning(f"{wm_name} is damned...")              
+        if wm_name and wm_name == "fkitty":
+            window.toggle_floating()
+            window.set_size_floating(640, 480)
+            window.set_position_floating(400, 300)
+    except Exception as e:
+        logger.warning(f"Error in center_floating_win: {e}")    
+
 @hook.subscribe.startup_once
 def start_picom():
     os.system("picom &")
