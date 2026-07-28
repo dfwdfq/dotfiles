@@ -21,8 +21,8 @@ set -gx BROWSER firefox
 alias emacs 'emacsclient -nw'
 
 if status is-interactive
-    fortune | cowsay
     fish ~/.config/scripts/todo.fish
+    fish ~/.config/scripts/welcome-menu.fish
 end
 
 set -gx FZF_DEFAULT_OPTS "
