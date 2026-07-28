@@ -1,6 +1,6 @@
 function gdl
-    set content (ls (pwd))
-    set dirs . ..
+    set content (ls -a (pwd))
+    set dirs
     for entry in $content
 	if test -d $entry
 	    set dirs $dirs $entry
