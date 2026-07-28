@@ -22,7 +22,7 @@ alias emacs 'emacsclient -nw'
 
 if status is-interactive
     fish ~/.config/scripts/todo.fish
-    fish ~/.config/scripts/welcome-menu.fish
+    welcome
 end
 
 set -gx FZF_DEFAULT_OPTS "
