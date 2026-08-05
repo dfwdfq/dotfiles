@@ -1,6 +1,5 @@
 import os
 import subprocess
-
 import io
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget, hook
@@ -24,7 +23,7 @@ def center_floating_win(window):
     try:
         wm_name = window.name
         logger.warning(f"{wm_name} is damned...")              
-        if wm_name and wm_name == "fkitty":
+        if wm_name and wm_name in ("fkitty","wkitty"):
             window.toggle_floating()
             window.set_size_floating(640, 480)
             window.set_position_floating(400, 300)
