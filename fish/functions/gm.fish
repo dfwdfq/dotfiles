@@ -78,8 +78,6 @@ function __gm__
 	    __cs__
 	case 'u '
 	    __cm__
-	case 'r '
-	    __cr__
 	case 'd '
 	    __cd__
         case '*'
