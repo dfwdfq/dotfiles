@@ -1,3 +1,5 @@
+(require 'package)
+(package-initialize)
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -124,21 +126,13 @@
   :ensure t
   :mode ("\\.rs\\'" . rust-mode))
 
-
 (use-package fzf
-  :ensure t
+  :bind
   :config
-  (setq fzf/executable "fzf"
-        fzf/git-grep-args "-i --line-number %s"
-        fzf/grep-command "grep -nrH"
-        fzf/window-height (frame-height)
-	fzf/args
-        (concat
-         "--extended  --height=100% --no-hscroll "
-         "--color="
-         "bg:0,fg:7,hl:5,fg+:7,bg+:5,"
-         "info:6,prompt:3,pointer:6,marker:6,spinner:6,header:6"
-         )))
+  (setq fzf/args "-x --color bw --print-query --margin=1,0 --no-hscroll --color=bg:0,fg:7,hl:5,fg+:7,bg+:5,info:6,prompt:3,pointer:6,marker:6,spinner:6,header:6"
+        fzf/executable "fzf"
+        fzf/position-bottom t
+        fzf/window-height 15))
 
 ;;#keybinding: F1
 ;;#description: open buffer-switcher with fzf
