@@ -28,7 +28,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(company-c-headers fish-mode fzf rust-mode auto-complete corfu racket-mode)))
+   '(fish-mode company-c-headers fzf rust-mode auto-complete corfu racket-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -167,3 +167,7 @@
 
 (define-key org-mode-map (kbd "C-x p") 'my/jump-to-point-right)
 (define-key org-mode-map (kbd "C-x n") 'my/jump-to-point-left)
+
+
+(add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
+(add-to-list 'interpreter-mode-alist '("fish" . fish-mode))
