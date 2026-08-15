@@ -25,7 +25,7 @@
 ;;#arguments: text action
 ;;#description: create button in welcome-buffer.
 ;;#.
-(defun make-button (text action)
+(defun make-button (text action &rest _)
   "Create a button that works when point is on it."
   (let ((start (point)))
     (insert text)
