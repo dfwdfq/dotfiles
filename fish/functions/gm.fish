@@ -29,10 +29,7 @@ function __cd__
     set header "files to diff"
     set items (echo $staged | tr ' ' '\n' | __fzf__ $header $__bndlst__ $__footer__)
     for i in $items
-	git diff $i
-	echo
-	echo
-	echo "<---------------------->"
+	git diff $i | batcat --paging=always
     end
 end
     
@@ -91,9 +88,10 @@ function gm
 	echo "no git."
 	return 0
     end
-    set options "uu:add untracked files\na :stage to commit\nu :unstage commitable state\nr :restore files to prev commit\nd :diff files"
+    set options "uu:add untracked files\na :stage to commit\nu :unstage from commit\nr :restore files to prev commit\nd :diff files"
     set opt (printf $options | __fzfmain__ | perl -F: -ane 'print $F[0]')
     __gm__ $opt
 
     git status
 end    
+
