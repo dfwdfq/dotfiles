@@ -142,3 +142,59 @@ c.content.pdfjs = True
 # color).
 # Type: QtColor
 c.colors.webpage.bg = 'black'
+
+
+# Deep Purple qutebrowser theme
+c.colors.webpage.bg = "#0a0a15"
+c.colors.webpage.preferred_color_scheme = "dark"
+
+c.colors.statusbar.normal.bg = "#0a0a15"
+c.colors.statusbar.normal.fg = "#f8f8ff"
+c.colors.statusbar.insert.bg = "#6bff9c"
+c.colors.statusbar.insert.fg = "#0a0a15"
+c.colors.statusbar.command.bg = "#1a1a2e"
+c.colors.statusbar.command.fg = "#f8f8ff"
+c.colors.statusbar.private.bg = "#ff6b9c"
+c.colors.statusbar.private.fg = "#0a0a15"
+
+c.colors.tabs.bar.bg = "#0a0a15"
+c.colors.tabs.even.bg = "#1a1a2e"
+c.colors.tabs.even.fg = "#a8a8d0"
+c.colors.tabs.odd.bg = "#1a1a2e"
+c.colors.tabs.odd.fg = "#a8a8d0"
+c.colors.tabs.selected.even.bg = "#3a3a55"
+c.colors.tabs.selected.even.fg = "#f8f8ff"
+c.colors.tabs.selected.odd.bg = "#3a3a55"
+c.colors.tabs.selected.odd.fg = "#f8f8ff"
+c.colors.tabs.indicator.start = "#9d6bff"
+c.colors.tabs.indicator.stop = "#6bff9c"
+c.colors.tabs.indicator.error = "#ff6b9c"
+
+c.colors.completion.fg = "#f8f8ff"
+c.colors.completion.even.bg = "#0a0a15"
+c.colors.completion.odd.bg = "#1a1a2e"
+c.colors.completion.category.bg = "#3a3a55"
+c.colors.completion.category.fg = "#f8f8ff"
+c.colors.completion.item.selected.bg = "#3a3a55"
+c.colors.completion.item.selected.fg = "#ffffff"
+c.colors.completion.match.fg = "#6bd8ff"
+
+c.colors.hints.bg = "#e7cfff"
+c.colors.hints.fg = "#0a0a15"
+c.colors.hints.match.fg = "#ff6b9c"
+
+c.colors.messages.info.bg = "#1a1a2e"
+c.colors.messages.info.fg = "#f8f8ff"
+c.colors.messages.warning.bg = "#ffd46b"
+c.colors.messages.warning.fg = "#0a0a15"
+c.colors.messages.error.bg = "#ff6b9c"
+c.colors.messages.error.fg = "#0a0a15"
+
+c.colors.prompts.bg = "#1a1a2e"
+c.colors.prompts.fg = "#f8f8ff"
+c.colors.prompts.selected.bg = "#3a3a55"
+c.colors.prompts.selected.fg = "#ffffff"
+
+c.colors.keyhint.bg = "#0a0a15"
+c.colors.keyhint.fg = "#f8f8ff"
+c.colors.keyhint.suffix.fg = "#ffd46b"
