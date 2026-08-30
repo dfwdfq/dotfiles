@@ -198,3 +198,9 @@ c.colors.prompts.selected.fg = "#ffffff"
 c.colors.keyhint.bg = "#0a0a15"
 c.colors.keyhint.fg = "#f8f8ff"
 c.colors.keyhint.suffix.fg = "#ffd46b"
+
+
+from pathlib import Path
+start_page = Path.home() / ".config/qutebrowser/default.html"
+config.set("url.default_page", start_page.as_uri())
+config.set("url.start_pages", [start_page.as_uri()])
