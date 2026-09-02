@@ -20,6 +20,14 @@
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")
     (insert "#+TAGS: ")))
 
+(defun create-daily-note ()
+  (interactive)
+  (find-file
+   (expand-file-name
+    (concat
+     (format-time-string "%Y-%m-%d")
+     ".org") "~/docs/daily")))
+
 (defun create-todo ()
   "Ask user for todo list filename."
   (interactive)

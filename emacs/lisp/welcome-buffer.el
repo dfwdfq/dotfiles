@@ -68,7 +68,10 @@
           ;; Add spacing and centered buttons
           (insert "\n\n")
           (let ((button-padding (max 0 (/ (- window-width 20) 2)))) ; Adjust for button width
-	    
+
+	    (insert (make-string button-padding ? ))
+	    (make-button "[What happened today?]" #'create-daily-note)
+	    (insert "\n")
             (insert (make-string button-padding ? ))
             (make-button "[Write Org  Note]" #'create-note)
             (insert "\n")
