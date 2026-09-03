@@ -22,12 +22,15 @@
 
 (defun create-daily-note ()
   (interactive)
-  (find-file
-   (expand-file-name
-    (concat
-     (format-time-string "%Y-%m-%d")
-     ".org") "~/docs/daily")))
-
+  (let* ((filename (concat "~/docs/daily/" (format-time-string  "%Y-%m-%d") ".org"))
+	 (time-line (concat "#+time:" (format-time-string "%H:%M") "\n")))
+    (find-file (expand-file-name filename))
+    (unless (file-exists-p filename)
+      (progn
+	(insert time-line)
+	(insert "#+TAGS:")))))
+	
+	 
 (defun create-todo ()
   "Ask user for todo list filename."
   (interactive)
