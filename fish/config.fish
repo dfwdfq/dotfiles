@@ -16,7 +16,7 @@ set -gx EDITOR  "emacsclient -nw"
 #purpose: look for this variable when it's required to open browser
 #value: firefox
 #.
-set -gx BROWSER firefox
+set -gx BROWSER qutebrowser
 
 alias emacs 'emacsclient -nw'
 
