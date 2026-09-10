@@ -73,6 +73,8 @@ function __gm__
 	    __cu__
 	case 'a '
 	    __cs__
+	    read -P commit: commit
+	    git commit -m"$commit"
 	case 'u '
 	    __cm__
 	case 'd '
