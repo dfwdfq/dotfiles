@@ -12,8 +12,12 @@ end
 
 
 function find-sub-in-files
+    if test (count $argv) -ne 1
+	echo "fucked up!"
+	return 1
+    end
+    set sub $argv[1]    
     set items (gdf | __fzf__)
-    read -P "substring:" sub
     
     for file in $items
 	printf "searching $sub in $file:\n"
