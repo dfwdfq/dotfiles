@@ -1,6 +1,9 @@
 #!/usr/bin/env perl
-use strict;
 use warnings;
+use strict;
+
+my $type = shift or die "usage: update-todo-list.pl [inbox|current]";
+die "should be 'inbox' or 'current' "if($type ne "inbox" && $type ne "current");
 
 
 open(my $out, ">>", glob("~/docs/todos/completed.org")) or die "can't open completed.org!";
@@ -17,7 +20,9 @@ while(<>){
 close $out or die "$out: $!";
 close $tmp or die "$tmp: $!";
 
-open(my $in, ">", glob("~/docs/todos/current.org")) or die "can't open current.org";
+my $list = $type eq "current"? "current.org": "inbox.org";
+
+open(my $in, ">", glob("~/docs/todos/$list")) or die "can't open $list";
 open($tmp,"<", "/tmp/.todotmp") or die "can't open /tmp/.todotmp";
 while(<$tmp>){
      print $in $_;
