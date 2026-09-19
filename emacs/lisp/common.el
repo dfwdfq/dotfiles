@@ -20,6 +20,10 @@
     (insert "#+date: " (format-time-string "%Y-%m-%d %H:%M") "\n")
     (insert "#+TAGS: ")))
 
+(defun insert-command-output (program &rest args)
+  "Insert PROGRAM's output at point, passing ARGS to it."
+  (interactive)
+  (apply #'call-process program nil t nil args))
 (defun create-daily-note ()
   (interactive)
   (let* ((filename (concat "~/docs/daily/" (format-time-string  "%Y-%m-%d") ".org"))
@@ -28,7 +32,9 @@
     (unless (file-exists-p filename)
       (progn
 	(insert time-line)
-	(insert "#+TAGS:")))))
+	(insert "#+TAGS:")
+	(insert "* wrote today")
+	(insert-command-output "python" (expand-file-name "~/.config/scripts/wrote-today.py"))))))
 	
 	 
 (defun create-todo ()
