@@ -1,5 +1,11 @@
+
 function jd
-    set opt (gdl | fzf --margin 10% --border)
+    set key -d
+    if test (count $argv) -ge 1
+	set key $argv[1]
+    end
+    
+    set opt (gdc $key | fzf --margin 10% --border $argv[2..-1])
     if test $status = 130
 	return 0
     end

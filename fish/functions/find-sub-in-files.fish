@@ -17,7 +17,7 @@ function find-sub-in-files
 	return 1
     end
     set sub $argv[1]    
-    set items (gdf | __fzf__)
+    set items (gdc -f | __fzf__)
     
     for file in $items
 	printf "searching $sub in $file:\n"
