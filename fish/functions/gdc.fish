@@ -4,8 +4,8 @@ function gdc
     set dirs
     for entry in $content
 	if test $key $entry
-	    set dirs $dirs $entry
+	    set dirs $dirs "$entry"
 	end
     end
-    echo $dirs | tr ' ' '\n'
+    printf '%s\n' $dirs
 end    
