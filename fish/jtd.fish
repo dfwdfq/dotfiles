@@ -1,0 +1,1 @@
+cd $DM_ROOT
