@@ -33,7 +33,9 @@
       (progn
 	(insert time-line)
 	(insert "#+TAGS:")
+	(insert "\n")
 	(insert "* wrote today")
+	(insert "\n")
 	(insert-command-output "python" (expand-file-name "~/.config/scripts/wrote-today.py"))))))
 	
 	 
