@@ -14,6 +14,6 @@ function jd
     end
     
     echo "cd $opt" > /tmp/jd
-    update_jd
+    source /tmp/jd
     jd
 end
