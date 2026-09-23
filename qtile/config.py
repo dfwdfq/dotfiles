@@ -25,7 +25,7 @@ def center_floating_win(window):
         logger.warning(f"{wm_name} is damned...")              
         if wm_name and wm_name in ("fkitty","wkitty"):
             window.toggle_floating()
-            window.set_size_floating(640, 480)
+            window.set_size_floating(800, 500)
             window.set_position_floating(400, 300)
     except Exception as e:
         logger.warning(f"Error in center_floating_win: {e}")    
