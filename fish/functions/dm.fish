@@ -3,7 +3,7 @@ function __main-menu
 end	
 function __lurk
     set -l preview_cmd "batcat --color=always --style=numbers --line-range :500 {}"
-    ls *.org | _fzf_ "lurking..." "" --preview $preview_cmd
+    ls *.org | _fzf_ "lurking..." "" --preview $preview_cmd --preview-window 'up:60%:wrap'
 end
 function __choose
     printf "%s\n" $argv[2..-1] | _fzf_ $argv[1] ""
@@ -16,7 +16,7 @@ function _lurk_
     source /tmp/dm
     __lurk
 end
-function dm
+function dm    
     set -l start (pwd)
     printf "cd %s" $start > /tmp/dms
     source ~/.config/fish/jtd.fish
@@ -28,14 +28,8 @@ function dm
 	case "lurk misc"
 	    set come_in (_lurk_ "choose misc category" $DM_MISC_VIEW)
 	case "search"
-	    set fuck 67
-	    find-sub-in-files
+	    find-sub-in-files --include="*.org"
     end
 
-    if test $fuck -ne 67
-	if read-confirm "open $come_in in Emacs?"
-	    emacs $come_in
-	end
-    end
     source /tmp/dms
 end
