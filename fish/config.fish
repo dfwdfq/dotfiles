@@ -20,8 +20,23 @@ set -gx BROWSER qutebrowser
 
 alias emacs 'emacsclient -nw'
 
+set -gx todo_root ~/docs/todos
+set -gx todo_current $todo_root/current.org
+set -gx todo_inbox $todo_root/inbox.org
+
+alias todo-update 'perl ~/.config/scripts/update-todo-list.pl'
+alias todo-toggle 'perl ~/.config/scripts/change-status.pl'
+
 if status is-interactive
-    fish ~/.config/scripts/todo.fish
+    set -l ktfs (kitten query-terminal font_size | tr -d -c 0-9)    
+    if test $ktfs = 10
+	cat $todo_current | todo-update current
+	cat $todo_inbox | todo-update inbox
+	clear
+	todo-pick
+	kitten @ close-tab --self
+	kitty
+    end
     welcome
 end
 
