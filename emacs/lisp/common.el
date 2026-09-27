@@ -36,7 +36,11 @@
 	(insert "\n")
 	(insert "* wrote today")
 	(insert "\n")
-	(insert-command-output "python" (expand-file-name "~/.config/scripts/wrote-today.py"))))))
+	(insert-command-output "python" (expand-file-name "~/.config/scripts/wrote-today.py"))
+	(insert "\n")
+	(insert "* done today\n")
+	(insert (shell-command-to-string "todo-done-today"))
+	))))
 	
 	 
 (defun create-todo ()
