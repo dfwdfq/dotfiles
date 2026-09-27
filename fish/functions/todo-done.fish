@@ -8,5 +8,5 @@ function todo-done
     end
 
     read -P "completed step:" msg
-    printf "-%s\n" $msg >> $log_file
+    printf "[%s]: %s\n" (date "+%F %T") $msg >> $log_file
 end
