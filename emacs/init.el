@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 (require 'package)
 (package-initialize)
 (unless (package-installed-p 'use-package)
@@ -164,10 +166,21 @@
        (backward-char))
     (org-cycle)))
 
+(defun my/insert-link ()
+  (interactive)
+  (let* ((desc      (read-string "description: "))
+         (directory (read-directory-name "enter directory: "))
+         (files     (directory-files directory t)))
+    (fzf-with-entries 
+     files 
+     (lambda (selected-file)
+       (let ((relative-path (file-relative-name selected-file default-directory)))
+         (insert (format "[[file:%s][%s]]" relative-path desc)))))))
+      
 
 (define-key org-mode-map (kbd "C-x p") 'my/jump-to-point-right)
 (define-key org-mode-map (kbd "C-x n") 'my/jump-to-point-left)
-
+(define-key org-mode-map (kbd "C-c C-l") 'my/insert-link)
 
 (add-to-list 'auto-mode-alist '("\\.fish\\'" . fish-mode))
 (add-to-list 'interpreter-mode-alist '("fish" . fish-mode))
