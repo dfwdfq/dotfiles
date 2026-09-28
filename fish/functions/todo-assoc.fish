@@ -5,5 +5,9 @@ function todo-assoc
 	return 1
     end
     set -l hash (get-hash $curr_t)
-    emacs ~/docs/todos/assoc/$hash.org
+    set -l file ~/docs/todos/assoc/$hash.org
+    if not test -f $file
+	printf "#+title: %s\n" $curr_t > $file
+    end    
+    emacs $file
 end
