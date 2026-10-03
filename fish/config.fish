@@ -37,7 +37,11 @@ if status is-interactive
 	kitten @ close-tab --self
 	kitty
     end
-    welcome
+
+    set -l wflow (wflow-get-current)
+    if test $wflow = "none"
+	welcome
+    end
 end
 
 set -gx FZF_DEFAULT_OPTS "
