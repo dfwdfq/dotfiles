@@ -40,6 +40,7 @@
 	(insert "\n")
 	(insert "* done today\n")
 	(insert (shell-command-to-string "todo-done-today"))
+	(insert "\n* what happened today?\n")
 	))))
 	
 	 
