@@ -1,6 +1,6 @@
 function todo-match-hash
     set -l h $argv[1]
-    cat $todo_current | while read -l line
+    cat $todo_current $todo_inbox | while read -l line
 	set -l ch (get-hash $line)
 	if test "$ch" = "$h"	    
 	    echo $line
