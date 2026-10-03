@@ -41,6 +41,8 @@ if status is-interactive
     set -l wflow (wflow-get-current)
     if test $wflow = "none"
 	welcome
+    else
+	source /tmp/wf
     end
 end
 
