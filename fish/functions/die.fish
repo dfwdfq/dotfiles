@@ -7,5 +7,6 @@ function die
     git commit -m"update"
     git push gcrypt::https://codeberg.org/dfwdfq/docs.git
     echo "farewell, master of the jungle"
+    rm -f ~/.config/.wflow-current
     shutdown now
 end
