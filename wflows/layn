@@ -1,0 +1,15 @@
+#!/usr/bin/env fish
+
+printf "editor\ntree\nrepl" > ~/.config/wflow-current-tabs
+function mktab 
+    kitten @ action new_tab
+    kitten @ action set_tab_title $argv[1]
+    printf "%s\n" $argv[2] > /tmp/wf
+end
+
+wflow-set layn
+mktab "editor" "cd ~/projects/langs/layn"
+mktab "tree" "cd ~/projects/langs/layn"
+mktab "repl" "cd ~/projects/langs/layn/build-debug/repl"
+kitten @ close-tab --self
+
