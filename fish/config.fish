@@ -23,6 +23,7 @@ alias emacs 'emacsclient -nw'
 set -gx todo_root ~/docs/todos
 set -gx todo_current $todo_root/current.org
 set -gx todo_inbox $todo_root/inbox.org
+set -gx todo_completed $todo_root/completed.org
 
 alias todo-update 'perl ~/.config/scripts/update-todo-list.pl'
 alias todo-toggle 'perl ~/.config/scripts/change-status.pl'
